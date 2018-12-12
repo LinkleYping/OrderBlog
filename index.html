@@ -1,21 +1,82 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head><meta name="generator" content="Hexo 3.8.0">
-
-    <!--[if lt IE 9]>
-        <style>body {display: none; background: none !important} </style>
-        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
-    <![endif]-->
-
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="format-detection" content="telephone=no">
-<meta name="author" content="EP">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
 
 
-    
-    
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
 
 
 <meta property="og:type" content="website">
@@ -26,487 +87,677 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="EP&#39;s blog">
 
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 
-    <link rel="alternate" href="/atom.xml" title="EP&#39;s blog" type="application/atom+xml">
-
-
-
-    <link rel="shortcut icon" href="/favicon.png">
-
-
-
-    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
-
-
-
-    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
-
-
-
-    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
-    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
-
-
-<link rel="stylesheet" href="/css/style.css">
-
-
-    <style> .article { opacity: 0;} </style>
-
-
-<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-
-
-<title>EP&#39;s blog</title>
-
-<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
-
-<script>
-    var yiliaConfig = {
-        fancybox: true,
-        animate: true,
-        isHome: true,
-        isPost: false,
-        isArchive: false,
-        isTag: false,
-        isCategory: false,
-        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
-        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: 
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
+  };
 </script>
 
 
-    <script> yiliaConfig.jquery_ui = [false]; </script>
 
-
-
-    <script> yiliaConfig.rootUrl = "\/";</script>
-
+  <link rel="canonical" href="https://LinkleYping.github.io/">
 
 
 
 
 
-</head></html>
-<body>
-  <div id="container">
-    <div class="left-col">
-    <div class="overlay"></div>
-<div class="intrude-less">
-    <header id="header" class="inner">
-        <a href="/" class="profilepic">
-            <img src="/img/avatar.jpg" class="animated zoomIn">
-        </a>
-        <hgroup>
-          <h1 class="header-author"><a href="/">EP</a></h1>
-        </hgroup>
-
-        
-
-        
+  <title>EP's blog</title>
+  
 
 
-        
-            <div id="switch-btn" class="switch-btn">
-                <div class="icon">
-                    <div class="icon-ctn">
-                        <div class="icon-wrap icon-house" data-idx="0">
-                            <div class="birdhouse"></div>
-                            <div class="birdhouse_holes"></div>
-                        </div>
-                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
-                            <div class="ribbon"></div>
-                        </div>
-                        
-                        <div class="icon-wrap icon-link hide" data-idx="2">
-                            <div class="loopback_l"></div>
-                            <div class="loopback_r"></div>
-                        </div>
-                        
-                        
-                        <div class="icon-wrap icon-me hide" data-idx="3">
-                            <div class="user"></div>
-                            <div class="shoulder"></div>
-                        </div>
-                        
-                    </div>
-                    
-                </div>
-                <div class="tips-box hide">
-                    <div class="tips-arrow"></div>
-                    <ul class="tips-inner">
-                        <li>菜单</li>
-                        <li>标签</li>
-                        
-                        <li>友情链接</li>
-                        
-                        
-                        <li>关于我</li>
-                        
-                    </ul>
-                </div>
-            </div>
-        
 
-        <div id="switch-area" class="switch-area">
-            <div class="switch-wrap">
-                <section class="switch-part switch-part1">
-                    <nav class="header-menu">
-                        <ul>
-                        
-                            <li><a href="/">主页</a></li>
-                        
-                            <li><a href="/archives/">所有文章</a></li>
-                        
-                            <li><a href="/tags/">标签云</a></li>
-                        
-                            <li><a href="/about/">关于我</a></li>
-                        
-                        </ul>
-                    </nav>
-                    <nav class="header-nav">
-                        <ul class="social">
-                            
-                                <a class="fa Email" href="mailto:123@123.com" title="Email"></a>
-                            
-                                <a class="fa GitHub" href="#" title="GitHub"></a>
-                            
-                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
-                            
-                        </ul>
-                    </nav>
-                </section>
-                
-                
-                <section class="switch-part switch-part2">
-                    <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/LLVM/">LLVM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/论文/">论文</a></li></ul>
-                    </div>
-                </section>
-                
-                
-                
-                <section class="switch-part switch-part3">
-                    <div id="js-friends">
-                    
-                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
-                    
-                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
-                    
-                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
-                    
-                    </div>
-                </section>
-                
 
-                
-                
-                <section class="switch-part switch-part4">
-                
-                    <div id="js-aboutme">专注于前端</div>
-                </section>
-                
-            </div>
-        </div>
-    </header>                
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">EP's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
-    </div>
-    <div class="mid-col">
-      <nav id="mobile-nav">
-      <div class="overlay">
-          <div class="slider-trigger"></div>
-          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">EP</a></h1>
-      </div>
-    <div class="intrude-less">
-        <header id="header" class="inner">
-            <a href="/" class="profilepic">
-                <img src="/img/avatar.jpg" class="animated zoomIn">
-            </a>
-            <hgroup>
-              <h1 class="header-author"><a href="/" title="回到主页">EP</a></h1>
-            </hgroup>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
             
-            <nav class="header-menu">
-                <ul>
-                
-                    <li><a href="/">主页</a></li>
-                
-                    <li><a href="/archives/">所有文章</a></li>
-                
-                    <li><a href="/tags/">标签云</a></li>
-                
-                    <li><a href="/about/">关于我</a></li>
-                
-                <div class="clearfix"></div>
-                </ul>
-            </nav>
-            <nav class="header-nav">
-                        <ul class="social">
-                            
-                                <a class="fa Email" target="_blank" href="mailto:123@123.com" title="Email"></a>
-                            
-                                <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
-                            
-                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
-                            
-                        </ul>
-            </nav>
-        </header>                
-    </div>
-    <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-article" class="article article-type-post" itemscope="" itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/12/11/article/" class="article-date">
-      <time datetime="2018-12-11T11:56:14.000Z" itemprop="datePublished">2018-12-11</time>
-</a>
 
 
-    </div>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
   
-  <div class="article-inner">
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://LinkleYping.github.io/2018/12/11/article/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="EP">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EP's blog">
+    </span>
+
     
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
+      <header class="post-header">
+
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/11/article/">ZEUS:Analyzing Safety of Smart Contracts</a>
-    </h1>
-  
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/11/article/" itemprop="url">ZEUS:Analyzing Safety of Smart Contracts</a></h1>
+        
 
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-11T19:56:14+08:00">
+                2018-12-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        <h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p>一个智能合约无论占有多少资金在部署完成以后很难再修补漏洞。最近一个漏洞导致近五千万美元的加密货币损失。我们设计了验证智能合约正确性和公平性的框架–ZEUS。正确性指符合程序安全规则，公平性指符合高级商业逻辑。ZEUS利用抽象解释和符号执行方法进行检查，并且使用了约束角条款来快速验证合约的安全。我们基于以太坊和超级账本平台构建了ZEUS，并且使用它评估了超过22.4K的合约。我们的评估表明，超过94.6%的合约(持有加密货币价值超过5亿)是有漏洞的。ZEUS有零漏报率和低误报率，并且与现有技术相比研究分析时间上有一个数量级的改进。<br><strong>Constrained Horn Clause(CHC) verfication约束角条款验证</strong></p>
-<blockquote>
-<p>CHC是用来表示程序行为的中间语言，可以用来解释命令式、功能式、并发式的语言，也可以用来解释状态机、交易系统、马尔科夫链等计算模型。<br>成功案例：Windows设备驱动验证<br>现有工具：Z3、QARMC(CEGAR–Counter Example Guided Abstraction Refinement)、TRACER、VeriMAP(specialisation)  </p>
-</blockquote>
-<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>区块链是巩固比特币等加密货币的设计模式。它使用共识算法来保证互不信任的节点在无可行第三方的参与下进行可验证交易。它的应用使得智能合约可以使用程序性的编码规则反映任意多方交易。去年区块链投资超过14亿美元，而且自主应用的增加趋势使得智能合约正迅速成为实施金融工具的首选手段(比如说:货币、衍生品、钱包等)还有去中性化的赌博应用。<br>共识机制使得智能合约忠实执行，参与方的特权有：1.验证智能合约的正确性,ie:句法实现满足最佳编程实践;2.验证智能合约的公平性,ie:程序满足高层次的商业交易逻辑.虽然人工审计智能合约的正确性在某种程度上是可能的，但是它容易出错。但另一方面，自动正式审计需要特定的工具和逻辑。而且智能合约不像其他分布式系统代码一样，无论它持有多少金额，它都不可篡改并且难以修补，这使得问题进一步加剧。举例来说，TheDAO的投资者损失了将近5千万美元的加密货币，因为程序漏洞允许攻击者不断虹吸资金。在这篇文章中，我们跟踪了智能合约的正式验证问题，在部署之前验证其正确性和公平性至关重要。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">while (Balance &gt; (depositors[index].Amount * 115/100) &amp;&amp; index &lt; Total_Investors) </span><br><span class="line">&#123;</span><br><span class="line">  if(depositors[index].Amount!=0)</span><br><span class="line">  &#123;</span><br><span class="line">    payment = depositors[index].Amount * 115/100;</span><br><span class="line">    depositors[index].EtherAddress.send(payment);</span><br><span class="line">    Balance -= payment;</span><br><span class="line">    Total_Paid_Out += payment;</span><br><span class="line">    depositors[index].Amount = 0; //remove investor</span><br><span class="line">  &#125; break;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>上述智能合约向任何投资者提供15%的利润，但是它同时存在正确性和公平性的问题。第一，第六行的算术计算可能发生溢出，这是一个正确性的漏洞；第二，变量<code>index</code>在循环中从来都没有增加过，所以回报仅仅给了一个投资者；最后，<code>break</code>语句在付款给第一个投资者(智能合约部署者)后执行直接终止循环，所以该合约并不偿还任意其他的投资者，后两个漏洞导致了公平性的问题。<br>大多数智能合约领域的现有技术旨在处理安全性和设计时的隐私问题，很少研究智能合约的缺陷.<code>Oyente</code>在字节码层次上使用符号执行来检测漏洞，但他既不兼容也不健全。就像我们观察和与<code>Oyente</code>开发人员沟通过的那样，即使在一些微不足道的合约中也会出现很多误报。因为仅依靠字节码很难恢复作者意图(因为缺少上下文信息:包含类型、不同的函数调用重用相同的字节码等)很多公平性和正确性的问题，包含整数上溢和下溢还有其他的，都被<code>Oyente</code>忽略了。更近一步，它保守地处理循环，导致低估了循环行为，所以会忽略代码1中的两个公平性的漏洞。<br>Bhargavan提出了一个框架<code>F*</code>来正式验证Solidity编写的智能合约，它忽视了一些结构，比如说循环。考虑到我们分析的22493个合约，将近93%的智能合约包含循环。所以他们的工具只能在一小部分的公开合约上使用，他们的结果对这一点也进行了论证，在396个合约中他们只能分析其中46个。但是使用<code>F*</code>可以推理大多数正确性和公平性的属性，它的作者建议对这种推理使用手工证明，虽然还不清楚这种情况什么时候会发生。相比之下，我们建立了一个大规模的自动验证。<code>Why3</code>是一个正式验证Solidity合约可靠性的实验工具，它正处于开发中并且仅支持少部分的语法。更进一步，Solidity到Why3的翻译没有经过测试也不可信。<br>我们提出了ZEUS的设计和实现–使用抽象解释和符号执行来自动化正式验证智能合约的实践框架。ZEUS使用高级语言编写的智能合约作为输入，它利用用户帮助来生成一个<code>XACML模板风格</code>的正确性和公平性的标准。它将这些合约和特定的准则翻译成一个低级的中间表示，比如说LLVM字节码，对执行语义进行编码以正确推断合约行为。然后在中间代码上进行静态分析以确定必须声明验证的谓词。最后ZEUS将修改后的IR放入验证引擎中，验证引擎使用CHCs来快速验证智能合约的安全性。<br>ZEUS利用三个主要的观察指标来保证稳定性和可靠性。第一，虽然区块链的执行类似于基于任务语义的并发系统，一个交易只能从一个智能合约公开函数调用开始。这种属性大大减少了验证大多数属性的状态空间探索。而且，交易之间的数据依赖比如说在持续变量之间的读写依赖要求分析O(n^2)对事务交错。第二，智能合约是控制流和数据流驱使的，所以使用抽象解释和符号模型对智能合约建模允许ZEUS可靠的推测程序行为。抽象解释计算数据域上的循环和函数摘要，然后在模型检查阶段使用这些循环和函数摘要，减少模型检查阶段操作的状态空间。最后，CHCs提供一个合适的机制来表示验证条件，它可以被SMT求解器有效地释放。<br><strong>SMT solver(Satisfiability modulo theories)可满足模理论求解器</strong></p>
-<blockquote>
-<p>SAT–布尔可满足性求解器。<br>用于求解等式系统，不同的是，SMT接受不同格式的等式系统，而SAT对输入格式是有要求的，必须是CNF范式的布尔等式。用于形式化验证</p>
-</blockquote>
-<p><strong>XACML(eXtensible Access Control Markup Language可扩展访问控制标记语言)</strong></p>
-<blockquote>
-<p>是一个定义用于访问控制的体系结构和语言，语言由响应、回复和Policy组成，客户端发送一个请求给服务器，询问一个特定的动作是否可以被允许执行。服务器使用已有的Policy对请求进行评估，然后进行回复。这些Policy实现了组织的访问控制请求。</p>
-</blockquote>
-<p>ZEUS基于LLVM字节码做验证也收益良多，不仅仅是因为ZEUS可以使用一个产业化的工具链做分析，它还允许ZEUS在标准化的LLVM字节码上插入任意验证器，使用LLVM字节码还帮助ZEUS验证不同区块链平台的智能合约，包含以太坊、超级账本，使用不同高级语言编写，比如说C#,Go和JAVA。注意，大多数高级语言到LLVM字节码的翻译器已经可以获得。我们使用LLVM丰富的API集合来编写第一个Solidity到LLVM字节码的翻译器，为了验证忠实地实现了大多数Solidity语法的执行语义。更进一步，使用LLVM允许ZEUS将翻译实现和验证分离。<br>这篇文章做出来以下贡献：<br>(1) 我们对新的或者早已出现但是没有经过研究的事件在智能合约的上下文中进行分类，并且证明他们可以潜在地导致资金流失。<br>(2) 我们提出了一种形式化的Solidity执行语义抽象，结合抽象解释和符号模型检查来验证智能合约。<br>(3) 我们设计并实现了ZEUS，一个符号模型检查框架来验证正确性和合法性，我们设计了第一个Solidity到LLVM字节码的翻译器，并且提供一个程序分析模型来自动化插入给定Policy规范的验证条件。我们还提供了抽象Policy来正确建模Solidity的执行语义保证可靠性。更近一步，我们建立了一个交互式谓词提取工具便于智能合约中多方交互。<br>(4) 我们进行了第一个大规模Solidity智能合约源码分析，我们分析了22493个智能合约(1524个比较特殊)表明大概有94.6%的合约有一个甚至多个安全漏洞。但是我们并没有研究这些漏洞的实际可利用性。而且我们选择了几个有代表性的合约并且应用了一些智能合约特定的公平性准则。<br>(5) 智能合约有零漏报率，并且在我们的数据集上优于Oyente，误报率低，在分析时间上有一个数量级的改进。<br>(6) 通过用它分析超级账本的智能合约，我们展示了ZEUS的普遍可用性。我们还通过使用SMACK进行验证，演示了将ZEUS应用于选择的验证器的易用性(SMACK用于将源语言细节与验证器实现解耦)</p>
-<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>区块链是进行多方可验证交易的分布式账本，可以防止篡改和抵赖。除了交易之外，每一个区块还包含状态元数据(创建时的时间戳、交易的Merkle哈希、上一个块的哈希值、智能合约代码和数据)，挖矿是对每个块执行分布式计算评审的过程，用于相互不信任的环境中实现共识<br>无限制区块链：公有链<br>有限制区块链：联盟链</p>
-<h3 id="激励"><a href="#激励" class="headerlink" title="激励"></a>激励</h3><p>智能合约的正确性和安全性问题</p>
-<h4 id="A-正确性问题"><a href="#A-正确性问题" class="headerlink" title="A. 正确性问题"></a>A. 正确性问题</h4><p>(1) <strong>重入攻击</strong><br>是因为call语句导致合约控制流转换产生的漏洞<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">contract Wallet</span><br><span class="line">&#123;</span><br><span class="line">  mapping(address =&gt; uint) private userBalances;</span><br><span class="line">  function withdrawBalance() &#123;</span><br><span class="line">    uint amountToWithdraw = userBalances[msg.sender];</span><br><span class="line">    if (amountToWithdraw &gt; 0) </span><br><span class="line">    &#123;</span><br><span class="line">      msg.sender.call(userBalances[msg.sender]);</span><br><span class="line">      userBalances[msg.sender] = 0;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">contract AttackerContract</span><br><span class="line">&#123;</span><br><span class="line">  function ()</span><br><span class="line">  &#123;</span><br><span class="line">    Wallet wallet;</span><br><span class="line">    wallet.withdrawBalance();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>(2) <strong>未经检查的send</strong><br>send操作如果失败合约并不终止，而是返回false，有些合约不检查send执行的状态直接进行下一步操作导致合约出现漏洞。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if(gameHasEnded &amp;&amp; !prizePaidOut)</span><br><span class="line">&#123;</span><br><span class="line">  winner.send(1000); // send a prize to the winner</span><br><span class="line">  prizePaidOut = True;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>(3) <strong>send操作失败</strong><br>(4) <strong>整数上下溢出</strong><br>(5) <strong>交易状态依赖</strong><br>tx.origin指的是交易的最初发起者，但交易的最初发起者不一定是智能合约函数的直接调用者。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">contract UserWallet &#123;</span><br><span class="line">  function transfer(address dest, uint amount) </span><br><span class="line">  &#123;</span><br><span class="line">    if (tx.origin != owner) &#123; throw; &#125;</span><br><span class="line">    dest.send(amount);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">contract AttackWallet &#123;</span><br><span class="line">  function() </span><br><span class="line">  &#123;</span><br><span class="line">    UserWallet w = UserWallet(userWalletAddr);</span><br><span class="line">    w.transfer(thiefStorageAddr, msg.sender.balance);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>可以使用社会工程学的方式诱导UserWallet的部署者调用AttackWallet合约，此时tx.origin指的就是UserWallet而不是msg.sender</p>
-<h4 id="B-公平性的问题"><a href="#B-公平性的问题" class="headerlink" title="B. 公平性的问题"></a>B. 公平性的问题</h4><p>语义正确的合约并不一定遵守实际逻辑<br>(1) <strong>逻辑抽象</strong><br>使用selfdestruct时不对调用者的身份进行检测。<br>解决问题会给予奖励，但是如果合约中的金额不足以支持奖励支付可能会导致合约得到了难题的解答但是并没有给予解决问题的人奖励。<br>(2) <strong>逻辑不正确</strong><br>相似的变量名或者函数名导致的混淆<br>构造函数与合约名称完全不同并且为public类型，导致外部也可以调用这个构造函数<br>(3) <strong>逻辑正确但是不公平</strong><br>指的是合约代码不符合实际的商业逻辑需求。论文中举的是一个进行拍卖的合约，正常拍卖活动中应该限制拍卖方进行竞价，合约中并没有排除这种拍卖方竞价的情况。</p>
-<h4 id="C-矿工的影响"><a href="#C-矿工的影响" class="headerlink" title="C. 矿工的影响"></a>C. 矿工的影响</h4><p>(1) 区块状态依赖。时间戳、挖矿难度、gaslimit这些变量可能被用来生成随机数，但是这些变量可以被区块头部影响，而矿工又可以影响区块头部内容(加大成功的概率)<br>(2) 交易顺序依赖。矿工可以决定一个区块中的交易顺序。并发系统长期以来都在处理由于事务排序而导致的数据竞争问题。虽然Solidity不支持并发性，但由于其自身的重新排序标准，矿工可以影响事务的结果。由于这种对事务排序的依赖是一个通用的区块链特性，所以我们认为它是一个限制，而不是缺陷。</p>
-<h3 id="ZEUS"><a href="#ZEUS" class="headerlink" title="ZEUS"></a>ZEUS</h3><p>ZEUS的组成：1.政策构建器;2.源代码翻译器;3.验证器。ZEUS使用智能合约源码和使用特定语言编写的政策(用来验证合约)作为输入，它在智能合约的代码之上执行静态分析，并将Policy谓词作为assert语句插入正确的程序点。ZEUS使用翻译器将带有Policyassert语句的智能合约翻译成LLVM字节码。最后ZEUS调用它的验证器来确定assert违规，这表示Policy违规(就是调用验证器来确定assert语句是否会执行，如果执行了就表示违规)</p>
-<h4 id="A-标准化Solidity语法"><a href="#A-标准化Solidity语法" class="headerlink" title="A. 标准化Solidity语法"></a>A. 标准化Solidity语法</h4><p>设计了一个抽象语言来捕获Solidity程序的相关结构。一个程序由一系列的合约声明组成。除了声明和初始化合约的持久私有存储之外，每个合约可以抽象地看作一个或多个方法定义的序列，这些方法定义由关键字global表示。一个合约可以用一个ID唯一的表示，ID属于一组标识符。调用一个合约的public函数可以看成一笔交易。<br>为了简化，方法只有一个输入变量类型<em>T</em>和一个单一的全局变量，所以<em>T</em>可以是集合或者结构体。Solidity中的函数调用可以分为三种:internal, external和call。internal和external是通过goto语句实现的或者是内联的。call调用使用post。合约的主体被标记位<em>S</em>。相反，可以使用跨合约的参数调用post语句。因此，参数<em>l</em>是post的一部分。<br>我们语言的语义抽象具体的值和操作。因此，对我们来说，T或特定表达式语言e的枚举仍然是未指定的。语言的具体细节不重要，我们可以假定为任何传统命令式语言定义的线性算术表达式。<code>havoc</code>语句为变量<em>l</em>赋一个不确定的值。<code>assert</code>语句在符号编码中引入了对谓词真值的检查。<code>assume</code>语句阻塞，直到提供的表达式变为true并在合约中的给定控件位置指定数据状态为止。<br>虽然关于Solidity和我们的抽象语言在语义上的等价性的正式讨论是可取的，并且可以通过定义从Solidity结构到抽象语言结构的抽象函数来建立，但是为了空间的利益，我们省略了它。相反，我们用抽象语言直观地推理各种Solidity结构及其等效模型。<code>class</code>,<code>library</code>和<code>interfaces</code>这些结构在我们的抽象语言中可以被认为是全局变量和函数的集合，编译器在翻译C/C++代码到LLVM字节码的过程中也将他们视作相似的。<code>struct</code>,<code>mapping</code>,<code>array</code>,<code>bytes</code>都是全局的。像<code>sha256</code>这种可以影响同一个合约状态的方法被认为是<code>external</code>方法。像<code>send</code>,<code>transfer</code>和<code>call</code>这种对地址进行操作的语句是通过<code>post</code>语句进行建模的。像<code>selfdestruct</code>这样的特殊结构是用我们的抽象语言本地建模的。Solidity中所有的控制语句和函数修饰符都可以被解糖成<code>if-then-else</code>和<code>goto</code>的形式。像<code>assert</code>,<code>require</code>和<code>throw</code>这种出错处理也可以用<code>if-then</code>和<code>throw</code>表示。<strong>注意，在我们的语言中<code>assert</code>和<code>assume</code>是用来做验证的，<code>assert</code>语句与在Solidity中的语法不同</strong>。其他的编译指令，比如说<code>constant</code>和<code>storage</code>也被解糖了，而不是用我们的抽象语言明确建模的。<br><strong>语法糖</strong><br>语法糖实际上是一种便捷写法。<br>比如说<code>input.map(item =&gt; item + 1)</code>表示的是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">input.map(function (item) &#123;</span><br><span class="line">  return item + 1;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<p>语法糖的作用就是让写代码更加简单和容易理解。(相反的操作就是加盐)<br>之所以叫「语法」糖，不只是因为加糖后的代码功能与加糖前保持一致，更重要的是，糖在不改变其所在位置的语法结构的前提下，实现了运行时等价。可以简单理解为，加糖后的代码编译后跟加糖前一模一样。<br><strong>语言语义</strong>区块状态被定义为：$&lt;&lt;\Gamma, \sigma&gt;, BC&gt;$, $&lt;\Gamma, \sigma&gt;$是B正在挖掘的块，BC是已经提交的块列表，$\Gamma$指已经完成但是还没有提交的交易集合。Val是表达式在求值后可以取的值集合。$\sigma$是全局状态，$\sigma:Id-&gt;g$指合约标识到全局变量的映射。$\sigma$是指矿工按照特定顺序执行$\Gamma$后的状态。最后，交易确定后矿工将B加入自己的区块中。<br>交易由一系列的帧(用$\gamma$表示)组成。每一个帧被进一步定义为$f := &lt;l, id, M, pc, v&gt;$,l是方法的局部变量，M是合约(标识符为id)的代码，pc是程序计数器，v := &lt;i, o&gt;是用来存储输入输出的辅助存储器。$\gamma$的顶帧是正在执行的帧，与目前正在进行的交易有关，它不是持久区块链状态的一部分。一个空的帧可以被标记为$\epsilon$，标识符c被定义为$c := &lt;\gamma, \sigma&gt;$用来捕获交易状态，$\leadsto$表示小步骤操作语义.<br>下表列出了管理配置更改的相关语法规则，其余顺序语句的规则是标准的。符号$\to$说明一个交易与全局状态和区块链状态相关。符号$\gets$表示对一个lvar(局部变量)赋值。<br><strong>Table 1</strong></p>
-<h4 id="B-标准化规则语言"><a href="#B-标准化规则语言" class="headerlink" title="B.标准化规则语言"></a>B.标准化规则语言</h4><p>假设<code>PVars</code>是一组程序变量，<code>Func</code>是一组智能合约中的函数名称，<code>Expr</code>是一组条件表达式(特定的无量词一阶逻辑(FOL)公式)。Policy规范必须使用这些语法符号，以避免在验证期间产生歧义<br>ZEUS利用用户的帮助建立了一个XACML风格的Policy模板，$&lt;Sub, Obj, Op, Cond, Res&gt;$。主体$Sub \in PVar$ 是一组需要被跟踪的变量，客体$Obj \in PVar$是一组与主体交互的变量，$Op$是一组侧影响调用，用于捕获主体和对象之间交互的效果。$Op$还指定了一个触发器属性，即“pre”或“post”，指示谓词应该在指定操作之前还是之后保存，换句话说，$Op := &lt;f, trig&gt;$这里$f \in Func, trig \in {pre, post}$。条件$Cond \in Expr$是一组控制导致交互操作的谓词集。最后,$Res \in {T, F}$表明主体和操作之间被谓词控制的交互是被允许的还是被禁止的。<br><strong>Policy到assertion之间的转换</strong>我们的抽象语言包含assertion来定义智能合约中的状态可达特性。ZEUS利用policy来提取(a)需要assert的谓词(i.e. Cond)(b)在程序源代码中插入assert语句的正确控制位置.<br><code>Cond</code>在我们的抽象语言中是一个表达式，使用这个表达式谓词并将其包装在assert(exp)下，将在我们的抽象语言中创建一条语句，Res指示条件是以正常形式出现，还是以否定形式出现在assert语句中.Op表示谓词(如条件所示)必须满足trig.trig和Sub,Obj准确地判断操作的哪些调用应该以条件为前缀或后缀。换句话说，我们精确地知道了抽象程序P中必须assert Cond的位置<br>更正式的说，$f: Sub \times Obj \times Op \to Loc$，Loc是一组程序位置。使用污点分析来确定Sub和Obj结合使用的地方，通过只选择调用指定操作的那些控件位置，可以进一步细化此集合。最后的位置就是需要assert(Cond)的位置。</p>
-<h4 id="C-可靠性"><a href="#C-可靠性" class="headerlink" title="C.可靠性"></a>C.可靠性</h4><p>将源代码翻译成带有assert语句的抽象语言，并最后转换成LLVM字节码的过程是可靠的。1.Solidity翻译成我们的抽象语言不会影响语法表现，2.保守的替换assert语句不会影响方法的可靠性，2.把policy的确认问题转换成了一个状态可达问题。4.在Solidity程序的上下文中定义了一个可达状态。5.我们证明，通过确保程序的过近似版本具有状态可达性，我们不会遗漏任何程序行为。最后，我们证明从过近似的Solidity程序到LLVM字节码的翻译是完全一对一的翻译，我们的整体稳健性模块的决策过程被保留。<br>(1) <strong>从Solidity到抽象语言</strong>从Solidity到我们抽象语言的翻译过程保留了源语言的语义行为，虽然我们需要一个关于实体的语义等价性和我们的抽象语言的形式化论证，但是为了空间的利益，我们忽略了它。<br>(2) <strong>污点分析对可靠性的影响</strong>污点分析确定插入谓词语句的位置，可能会在多个位置插入谓词语句，这种插入可能会引入误报率但是不会漏报，所以我们的方法是可靠的。<br>(3) <strong>policy验证的语义实现</strong>policy是无量词的一阶逻辑公式，policy的验证可以被简化成状态可达问题，i.e.是否存在从开始策略就不成立的可达状态。<br>policy $\phi$ hold on 程序P,当$N \models \phi$,N是程序P做一个状态转换关系有限自动机的正式表示。assert(exp)在抽象语言中与高级语言中的assert语句有不同的语法含义。<br>(4) <strong>程序中assertion的安全意味着policy的确认</strong><br>定理1:源程序的安全性等价于翻译后程序的安全性<br>证明:assert语句的语义规则表明不会对除了程序计算器以外的任何数据状态造成改变。assert仅作为标记与底层验证器相关，以生成验证条件。翻译前后的程序行为相同，所以assertion的安全性也相同。<br>(5) <strong>Over-approximation的安全性</strong>assert语句的加入不影响安全性<br>(6) <strong>方法的安全性</strong>抽象语言到LLVM字节码也是安全的(soundness)</p>
-<h4 id="D-通过CHCs执行符号检查"><a href="#D-通过CHCs执行符号检查" class="headerlink" title="D.通过CHCs执行符号检查"></a>D.通过CHCs执行符号检查</h4><p>ZEUS使用CHCs<a href="https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20160001255.pdf" target="_blank" rel="noopener">A. Gurfinkel et al., “The SeaHorn Verification Framework,” in CAV<br>’15</a>来验证翻译成LLVM字节码后程序的安全性.CHC表示的优点使其能够与各种基于smt的求解器和现成的模型检查器进行交互</p>
-<h4 id="E-端到端的示例"><a href="#E-端到端的示例" class="headerlink" title="E.端到端的示例"></a>E.端到端的示例</h4><p>下图展示了一个各种端到端翻译的示例，合约向msg.sender发送msg.value的金额，然后在bal[msg.sender]中减去msg.value。policy检查send调用必须满足msg.sender的余额大于msg.value。ZEUS从policy中提取条件，将其转换成assert语句放入Solidity中，然后将其转换成抽象语言，最后将程序翻译成LLVM字节码。</p>
-<p>###实现</p>
 
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          摘要一个智能合约无论占有多少资金在部署完成以后很难再修补漏洞。最近一个漏洞导致近五千万美元的加密货币损失。我们设计了验证智能合约正确性和公平性的框架–ZEUS。正确性指符合程序安全规则，公平性指符合高级商业逻辑。ZEUS利用抽象解释和符号执行方法进行检查，并且使用了约束角条款来快速验证合约的安全。我
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/12/11/article/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/论文/">论文</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
     
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
   </div>
   
-</article>
+  
+  
+  </article>
 
 
-
-
-
-
-
-
+    
+      
 
   
-    <article id="post-llvm" class="article article-type-post" itemscope="" itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/10/08/llvm/" class="article-date">
-      <time datetime="2018-10-08T11:56:14.000Z" itemprop="datePublished">2018-10-08</time>
-</a>
 
-
-    </div>
   
-  <div class="article-inner">
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://LinkleYping.github.io/2018/10/08/llvm/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="EP">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EP's blog">
+    </span>
+
     
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
+      <header class="post-header">
+
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/08/llvm/">ubuntu下LLVM开发环境的配置</a>
-    </h1>
-  
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/08/llvm/" itemprop="url">ubuntu下LLVM开发环境的配置</a></h1>
+        
 
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-08T19:56:14+08:00">
+                2018-10-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        <h3 id="安装clang和cmake"><a href="#安装clang和cmake" class="headerlink" title="安装clang和cmake"></a>安装clang和cmake</h3><p><code>sudo apt-get install clang cmake</code>  </p>
-<h3 id="安装llvm"><a href="#安装llvm" class="headerlink" title="安装llvm"></a>安装llvm</h3><p><code>sudo apt-get install llvm</code><br>使用这种方法我默认安装上的llvm版本为3.8.0，安装后的文件目录为<code>/usr/share/llvm-3.8</code>  </p>
-<h3 id="修改LLVMConfig-cmake文件"><a href="#修改LLVMConfig-cmake文件" class="headerlink" title="修改LLVMConfig.cmake文件"></a>修改LLVMConfig.cmake文件</h3><p><code>set(LLVM_CMAKE_DIR &quot;${LLVM_INSTALL_PREFIX}/share/llvm/cmake&quot;)</code><br>改为<br><code>set(LLVM_CMAKE_DIR &quot;${LLVM_INSTALL_PREFIX}/share/llvm-3.8/cmake&quot;)</code>  </p>
-<h3 id="修改LLVMExports-relwithdebinfo-cmake文件"><a href="#修改LLVMExports-relwithdebinfo-cmake文件" class="headerlink" title="修改LLVMExports-relwithdebinfo.cmake文件"></a>修改LLVMExports-relwithdebinfo.cmake文件</h3><p>由于权限问题不能直接打开修改，在命令行中写入:<br><code>sudo gedit LLVMExports-relwithdebinfo.cmake</code><br>对文件进行如下修改:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#Commands may need to know the format version.  </span><br><span class="line">set(CMAKE_IMPORT_FILE_VERSION 1)</span><br><span class="line">set(_IMPORT_PREFIX &quot;/usr/lib/llvm-3.8&quot;)</span><br></pre></td></tr></table></figure></p>
-<p>注释与Polly相关的库引用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"># Import target &quot;PollyISL&quot; for configuration &quot;RelWithDebInfo&quot;                                                                                                                                               </span><br><span class="line"># set_property(TARGET PollyISL APPEND PROPERTY IMPORTED_CONFIGURATIONS RELWITHDEBINFO)                                                                                                                      </span><br><span class="line"># set_target_properties(PollyISL PROPERTIES                                                                                                                                                                 </span><br><span class="line">#   IMPORTED_LINK_INTERFACE_LANGUAGES_RELWITHDEBINFO &quot;C&quot;                                                                                                                                                    </span><br><span class="line">#   IMPORTED_LOCATION_RELWITHDEBINFO &quot;$&#123;_IMPORT_PREFIX&#125;/lib/libPollyISL.a&quot;                                                                                                                                  </span><br><span class="line">#   )                                                                                                                                                                                                       </span><br><span class="line">#                                                                                                                                                                                                           </span><br><span class="line"># list(APPEND _IMPORT_CHECK_TARGETS PollyISL )                                                                                                                                                              </span><br><span class="line"># list(APPEND _IMPORT_CHECK_FILES_FOR_PollyISL &quot;$&#123;_IMPORT_PREFIX&#125;/lib/libPollyISL.a&quot; )                                                                                                                      </span><br><span class="line">#                                                                                                                                                                                                           </span><br><span class="line"># # Import target &quot;Polly&quot; for configuration &quot;RelWithDebInfo&quot;                                                                                                                                                </span><br><span class="line"># set_property(TARGET Polly APPEND PROPERTY IMPORTED_CONFIGURATIONS RELWITHDEBINFO)                                                                                                                         </span><br><span class="line"># set_target_properties(Polly PROPERTIES                                                                                                                                                                    </span><br><span class="line">#   IMPORTED_LINK_INTERFACE_LANGUAGES_RELWITHDEBINFO &quot;CXX&quot;                                                                                                                                                  </span><br><span class="line">#   IMPORTED_LOCATION_RELWITHDEBINFO &quot;$&#123;_IMPORT_PREFIX&#125;/lib/libPolly.a&quot;                                                                                                                                     </span><br><span class="line">#   )                                                                                                                                                                                                       </span><br><span class="line">#                                                                                                                                                                                                           </span><br><span class="line"># list(APPEND _IMPORT_CHECK_TARGETS Polly )                                                                                                                                                                 </span><br><span class="line"># list(APPEND _IMPORT_CHECK_FILES_FOR_Polly &quot;$&#123;_IMPORT_PREFIX&#125;/lib/libPolly.a&quot; )                                                                                                                            </span><br><span class="line">#                                                                                                                                                                                                           </span><br><span class="line"># # Import target &quot;LLVMPolly&quot; for configuration &quot;RelWithDebInfo&quot;                                                                                                                                            </span><br><span class="line"># set_property(TARGET LLVMPolly APPEND PROPERTY IMPORTED_CONFIGURATIONS RELWITHDEBINFO)                                                                                                                     </span><br><span class="line"># set_target_properties(LLVMPolly PROPERTIES                                                                                                                                                                </span><br><span class="line">#   IMPORTED_LOCATION_RELWITHDEBINFO &quot;$&#123;_IMPORT_PREFIX&#125;/lib/LLVMPolly.so&quot;                                                                                                                                   </span><br><span class="line">#   IMPORTED_NO_SONAME_RELWITHDEBINFO &quot;TRUE&quot;                                                                                                                                                                </span><br><span class="line">#   )                                                                                                                                                                                                       </span><br><span class="line">#                                                                                                                                                                                                           </span><br><span class="line"># list(APPEND _IMPORT_CHECK_TARGETS LLVMPolly )                                                                                                                                                             </span><br><span class="line"># list(APPEND _IMPORT_CHECK_FILES_FOR_LLVMPolly &quot;$&#123;_IMPORT_PREFIX&#125;/lib/LLVMPolly.so&quot; )</span><br></pre></td></tr></table></figure></p>
-<h3 id="使用LLVM进行开发"><a href="#使用LLVM进行开发" class="headerlink" title="使用LLVM进行开发"></a>使用LLVM进行开发</h3><p>新建文件夹: <code>HowToUseJIT</code><br>目录结构如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">HowToUseJIT  </span><br><span class="line">    -- src</span><br><span class="line">        +  -- HowToUseJIT.cpp</span><br><span class="line">    -- CMakeLists.txt</span><br><span class="line">    -- build</span><br></pre></td></tr></table></figure></p>
-<p>在<code>HowToUseJIT</code>文件夹下进行如下操作:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd build</span><br><span class="line">cmake ..</span><br><span class="line">make</span><br></pre></td></tr></table></figure></p>
-<p><code>HowToUseJIT.cpp</code>和<code>CMakeLists.txt</code>文件可以自己根据LLVM提供的API自行开发，也可以使用下面所给的例子：<br><code>HowToUseJIT.cpp</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">#include &quot;llvm/IR/LLVMContext.h&quot;</span><br><span class="line">#include &quot;llvm/IR/Function.h&quot;</span><br><span class="line">#include &quot;llvm/IR/BasicBlock.h&quot;</span><br><span class="line">#include &quot;llvm/ADT/ArrayRef.h&quot;</span><br><span class="line">#include &quot;llvm/IR/Module.h&quot;</span><br><span class="line">#include &quot;llvm/IR/IRBuilder.h&quot;</span><br><span class="line">#include &lt;vector&gt;</span><br><span class="line">#include &lt;string&gt;</span><br><span class="line"> </span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">  llvm::LLVMContext &amp; context = llvm::getGlobalContext();</span><br><span class="line">  llvm::Module *module = new llvm::Module(&quot;asdf&quot;, context);</span><br><span class="line">  llvm::IRBuilder&lt;&gt; builder(context);</span><br><span class="line"> </span><br><span class="line">  llvm::FunctionType *funcType = llvm::FunctionType::get(builder.getVoidTy(), false);</span><br><span class="line">  llvm::Function *mainFunc = </span><br><span class="line">    llvm::Function::Create(funcType, llvm::Function::ExternalLinkage, &quot;main&quot;, module);</span><br><span class="line">  llvm::BasicBlock *entry = llvm::BasicBlock::Create(context, &quot;entrypoint&quot;, mainFunc);</span><br><span class="line">  builder.SetInsertPoint(entry);</span><br><span class="line"> </span><br><span class="line">  llvm::Value *helloWorld = builder.CreateGlobalStringPtr(&quot;hello world!\n&quot;);</span><br><span class="line"> </span><br><span class="line">  std::vector&lt;llvm::Type *&gt; putsArgs;</span><br><span class="line">  putsArgs.push_back(builder.getInt8Ty()-&gt;getPointerTo());</span><br><span class="line">  llvm::ArrayRef&lt;llvm::Type*&gt;  argsRef(putsArgs);</span><br><span class="line"> </span><br><span class="line">  llvm::FunctionType *putsType = </span><br><span class="line">    llvm::FunctionType::get(builder.getInt32Ty(), argsRef, false);</span><br><span class="line">  //llvm::Constant *putsFunc = module-&gt;getOrInsertFunction(&quot;puts&quot;, putsType);</span><br><span class="line">  llvm::Function *putsFunc = </span><br><span class="line">    llvm::Function::Create(putsType, llvm::Function::ExternalLinkage, &quot;puts&quot;, module);</span><br><span class="line">  llvm::BasicBlock *putsentry = llvm::BasicBlock::Create(context, &quot;entrypoint&quot;, putsFunc);</span><br><span class="line">  builder.SetInsertPoint(putsentry);</span><br><span class="line">  builder.CreateCall(putsFunc, helloWorld);</span><br><span class="line">  builder.CreateRetVoid();</span><br><span class="line">  module-&gt;dump();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><code>CMakeLists.txt</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">cmake_minimum_required(VERSION 2.8)</span><br><span class="line">project(llvm_test)</span><br><span class="line"></span><br><span class="line">set(LLVM_TARGETS_TO_BUILD X86)</span><br><span class="line">set(LLVM_BUILD_RUNTIME OFF)</span><br><span class="line">set(LLVM_BUILD_TOOLS OFF)</span><br><span class="line"></span><br><span class="line">find_package(LLVM REQUIRED CONFIG)</span><br><span class="line"></span><br><span class="line">message(STATUS &quot;Found LLVM $&#123;LLVM_INCLUDE_DIRS&#125;&quot;)</span><br><span class="line">message(STATUS &quot;Using LLVMConfig.cmake in: $&#123;LLVM_DIR&#125;&quot;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">SET (CMAKE_CXX_COMPILER_ENV_VAR &quot;clang++&quot;)</span><br><span class="line"></span><br><span class="line">SET (CMAKE_CXX_FLAGS &quot;-std=c++11&quot;)</span><br><span class="line">SET (CMAKE_CXX_FLAGS_DEBUG   &quot;-g&quot;)</span><br><span class="line">SET (CMAKE_CXX_FLAGS_MINSIZEREL  &quot;-Os -DNDEBUG&quot;)</span><br><span class="line">SET (CMAKE_CXX_FLAGS_RELEASE  &quot;-O4 -DNDEBUG&quot;)</span><br><span class="line">SET (CMAKE_CXX_FLAGS_RELWITHDEBINFO &quot;-O2 -g&quot;)</span><br><span class="line"></span><br><span class="line">SET(EXECUTABLE_OUTPUT_PATH $&#123;PROJECT_SOURCE_DIR&#125;/bin)</span><br><span class="line"></span><br><span class="line">include_directories($&#123;LLVM_INCLUDE_DIRS&#125;)</span><br><span class="line">add_definitions($&#123;LLVM_DEFINITIONS&#125;)</span><br><span class="line"></span><br><span class="line">file(GLOB_RECURSE source_files &quot;$&#123;CMAKE_CURRENT_SOURCE_DIR&#125;/src/*.cpp&quot;)</span><br><span class="line">add_executable(llvm_test $&#123;source_files&#125;)</span><br><span class="line">install(TARGETS llvm_test RUNTIME DESTINATION bin)</span><br><span class="line"></span><br><span class="line"># Find the libraries that correspond to the LLVM components</span><br><span class="line"># that we wish to use</span><br><span class="line">llvm_map_components_to_libnames(llvm_libs </span><br><span class="line">    Core</span><br><span class="line">    ExecutionEngine</span><br><span class="line">    Interpreter</span><br><span class="line">    MC</span><br><span class="line">    Support</span><br><span class="line">    nativecodegen)</span><br><span class="line"></span><br><span class="line"># Link against LLVM libraries</span><br><span class="line">target_link_libraries(llvm_test $&#123;llvm_libs&#125;)</span><br></pre></td></tr></table></figure></p>
-<p>如果编译通过说明LLVM开发环境搭建成功，如果报一些库文件缺失的错误有可能是因为默认LLVM文件夹的文件名为<code>llvm</code>而安装LLVM后自带的文件名为<code>llvm-3.8</code>可以根据报错内容对<code>/usr/share/llvm-3.8</code>或<code>usr/lib/llvm-3.8</code>的文件名进行修改 </p>
 
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          安装clang和cmakesudo apt-get install clang cmake  
+安装llvmsudo apt-get install llvm使用这种方法我默认安装上的llvm版本为3.8.0，安装后的文件目录为/usr/share/llvm-3.8  
+修改LLVMConfig.c
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/10/08/llvm/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LLVM/">LLVM</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
     
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
   </div>
   
-</article>
-
-
-
-
-
-
-
-
-
   
   
-</div>
-      <footer id="footer">
-    <div class="outer">
-        <div id="footer-info">
-            <div class="footer-left">
-                <i class="fa fa-copyright"></i> 
-                2016-2018 EP
-            </div>
-            <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
-            </div>
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+
+          
+
         </div>
         
-            <div class="visit">
-                
-                    <span id="busuanzi_container_site_pv" style="display:none">
-                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
-                        </span>
-                    </span>
-                
-                
-                    <span>| </span>
-                
-                
-                    <span id="busuanzi_container_page_pv" style="display:none">
-                        <span id="page-visit" title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
-                        </span>
-                    </span>
-                
-            </div>
-        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
     </div>
-</footer>
-    </div>
-    
-<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            var iPad = window.navigator.userAgent.indexOf('iPad');
-            if (iPad > -1 || $(".left-col").css("display") === "none") {
-                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
-                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
-                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
-            }
-            else {
-                var backgroundnum = 5;
-                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
-                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
-            }
-        })
-    </script>
-
-
-
-
-
-<div class="scroll" id="scroll">
-    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
-</div>
-<script>
-    // Open in New Window
-    
-        var oOpenInNew = {
-            
-            
-            
-            
-            
-            
-             archives: ".archive-article-title", 
-             miniArchives: "a.post-list-link", 
-            
-             friends: "#js-friends a", 
-             socail: ".social a" 
-        }
-        for (var x in oOpenInNew) {
-            $(oOpenInNew[x]).attr("target", "_blank");
-        }
-    
-</script>
-
-<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
   </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">EP</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">EP</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
 </body>
 </html>
