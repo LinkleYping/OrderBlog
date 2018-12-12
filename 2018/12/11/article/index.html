@@ -14,17 +14,19 @@
 <meta name="author" content="EP">
 
 
-    
-    
 
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="EP&#39;s blog">
-<meta property="og:url" content="https://LinkleYping.github.io/index.html">
+<meta name="description" content="摘要一个智能合约无论占有多少资金在部署完成以后很难再修补漏洞。最近一个漏洞导致近五千万美元的加密货币损失。我们设计了验证智能合约正确性和公平性的框架–ZEUS。正确性指符合程序安全规则，公平性指符合高级商业逻辑。ZEUS利用抽象解释和符号执行方法进行检查，并且使用了约束角条款来快速验证合约的安全。我们基于以太坊和超级账本平台构建了ZEUS，并且使用它评估了超过22.4K的合约。我们的评估表明，超过">
+<meta name="keywords" content="论文">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ZEUS:Analyzing Safety of Smart Contracts">
+<meta property="og:url" content="https://LinkleYping.github.io/2018/12/11/article/index.html">
 <meta property="og:site_name" content="EP&#39;s blog">
+<meta property="og:description" content="摘要一个智能合约无论占有多少资金在部署完成以后很难再修补漏洞。最近一个漏洞导致近五千万美元的加密货币损失。我们设计了验证智能合约正确性和公平性的框架–ZEUS。正确性指符合程序安全规则，公平性指符合高级商业逻辑。ZEUS利用抽象解释和符号执行方法进行检查，并且使用了约束角条款来快速验证合约的安全。我们基于以太坊和超级账本平台构建了ZEUS，并且使用它评估了超过22.4K的合约。我们的评估表明，超过">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-12-12T09:40:42.045Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="EP&#39;s blog">
+<meta name="twitter:title" content="ZEUS:Analyzing Safety of Smart Contracts">
+<meta name="twitter:description" content="摘要一个智能合约无论占有多少资金在部署完成以后很难再修补漏洞。最近一个漏洞导致近五千万美元的加密货币损失。我们设计了验证智能合约正确性和公平性的框架–ZEUS。正确性指符合程序安全规则，公平性指符合高级商业逻辑。ZEUS利用抽象解释和符号执行方法进行检查，并且使用了约束角条款来快速验证合约的安全。我们基于以太坊和超级账本平台构建了ZEUS，并且使用它评估了超过22.4K的合约。我们的评估表明，超过">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -52,13 +54,11 @@
 <link rel="stylesheet" href="/css/style.css">
 
 
-    <style> .article { opacity: 0;} </style>
-
 
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>EP&#39;s blog</title>
+<title>ZEUS:Analyzing Safety of Smart Contracts | EP&#39;s blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -67,8 +67,8 @@
     var yiliaConfig = {
         fancybox: true,
         animate: true,
-        isHome: true,
-        isPost: false,
+        isHome: false,
+        isPost: true,
         isArchive: false,
         isTag: false,
         isCategory: false,
@@ -258,9 +258,7 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-article" class="article article-type-post" itemscope="" itemprop="blogPost">
+      <div class="body-wrap"><article id="post-article" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2018/12/11/article/" class="article-date">
@@ -278,12 +276,23 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/11/article/">ZEUS:Analyzing Safety of Smart Contracts</a>
+    <h1 class="article-title" itemprop="name">
+      ZEUS:Analyzing Safety of Smart Contracts
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/论文/">论文</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -325,92 +334,85 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/论文/">论文</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
   
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-llvm" class="article article-type-post" itemscope="" itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/10/08/llvm/" class="article-date">
-      <time datetime="2018-10-08T11:56:14.000Z" itemprop="datePublished">2018-10-08</time>
-</a>
-
-
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2018/12/11/article/">ZEUS:Analyzing Safety of Smart Contracts</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">EP</a></p>
+        <p><span>发布时间:</span>2018-12-11, 19:56:14</p>
+        <p><span>最后更新:</span>2018-12-12, 17:40:42</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/12/11/article/" title="ZEUS:Analyzing Safety of Smart Contracts">https://LinkleYping.github.io/2018/12/11/article/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://LinkleYping.github.io/2018/12/11/article/　　作者: EP" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
     </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
+
+
+
+    <nav id="article-nav">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/08/llvm/">ubuntu下LLVM开发环境的配置</a>
-    </h1>
-  
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2018/10/08/llvm/">
+                    ubuntu下LLVM开发环境的配置
+                </a>
+            </div>
+        
+    </nav>
 
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h3 id="安装clang和cmake"><a href="#安装clang和cmake" class="headerlink" title="安装clang和cmake"></a>安装clang和cmake</h3><p><code>sudo apt-get install clang cmake</code>  </p>
-<h3 id="安装llvm"><a href="#安装llvm" class="headerlink" title="安装llvm"></a>安装llvm</h3><p><code>sudo apt-get install llvm</code><br>使用这种方法我默认安装上的llvm版本为3.8.0，安装后的文件目录为<code>/usr/share/llvm-3.8</code>  </p>
-<h3 id="修改LLVMConfig-cmake文件"><a href="#修改LLVMConfig-cmake文件" class="headerlink" title="修改LLVMConfig.cmake文件"></a>修改LLVMConfig.cmake文件</h3><p><code>set(LLVM_CMAKE_DIR &quot;${LLVM_INSTALL_PREFIX}/share/llvm/cmake&quot;)</code><br>改为<br><code>set(LLVM_CMAKE_DIR &quot;${LLVM_INSTALL_PREFIX}/share/llvm-3.8/cmake&quot;)</code>  </p>
-<h3 id="修改LLVMExports-relwithdebinfo-cmake文件"><a href="#修改LLVMExports-relwithdebinfo-cmake文件" class="headerlink" title="修改LLVMExports-relwithdebinfo.cmake文件"></a>修改LLVMExports-relwithdebinfo.cmake文件</h3><p>由于权限问题不能直接打开修改，在命令行中写入:<br><code>sudo gedit LLVMExports-relwithdebinfo.cmake</code><br>对文件进行如下修改:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#Commands may need to know the format version.  </span><br><span class="line">set(CMAKE_IMPORT_FILE_VERSION 1)</span><br><span class="line">set(_IMPORT_PREFIX &quot;/usr/lib/llvm-3.8&quot;)</span><br></pre></td></tr></table></figure></p>
-<p>注释与Polly相关的库引用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"># Import target &quot;PollyISL&quot; for configuration &quot;RelWithDebInfo&quot;                                                                                                                                               </span><br><span class="line"># set_property(TARGET PollyISL APPEND PROPERTY IMPORTED_CONFIGURATIONS RELWITHDEBINFO)                                                                                                                      </span><br><span class="line"># set_target_properties(PollyISL PROPERTIES                                                                                                                                                                 </span><br><span class="line">#   IMPORTED_LINK_INTERFACE_LANGUAGES_RELWITHDEBINFO &quot;C&quot;                                                                                                                                                    </span><br><span class="line">#   IMPORTED_LOCATION_RELWITHDEBINFO &quot;$&#123;_IMPORT_PREFIX&#125;/lib/libPollyISL.a&quot;                                                                                                                                  </span><br><span class="line">#   )                                                                                                                                                                                                       </span><br><span class="line">#                                                                                                                                                                                                           </span><br><span class="line"># list(APPEND _IMPORT_CHECK_TARGETS PollyISL )                                                                                                                                                              </span><br><span class="line"># list(APPEND _IMPORT_CHECK_FILES_FOR_PollyISL &quot;$&#123;_IMPORT_PREFIX&#125;/lib/libPollyISL.a&quot; )                                                                                                                      </span><br><span class="line">#                                                                                                                                                                                                           </span><br><span class="line"># # Import target &quot;Polly&quot; for configuration &quot;RelWithDebInfo&quot;                                                                                                                                                </span><br><span class="line"># set_property(TARGET Polly APPEND PROPERTY IMPORTED_CONFIGURATIONS RELWITHDEBINFO)                                                                                                                         </span><br><span class="line"># set_target_properties(Polly PROPERTIES                                                                                                                                                                    </span><br><span class="line">#   IMPORTED_LINK_INTERFACE_LANGUAGES_RELWITHDEBINFO &quot;CXX&quot;                                                                                                                                                  </span><br><span class="line">#   IMPORTED_LOCATION_RELWITHDEBINFO &quot;$&#123;_IMPORT_PREFIX&#125;/lib/libPolly.a&quot;                                                                                                                                     </span><br><span class="line">#   )                                                                                                                                                                                                       </span><br><span class="line">#                                                                                                                                                                                                           </span><br><span class="line"># list(APPEND _IMPORT_CHECK_TARGETS Polly )                                                                                                                                                                 </span><br><span class="line"># list(APPEND _IMPORT_CHECK_FILES_FOR_Polly &quot;$&#123;_IMPORT_PREFIX&#125;/lib/libPolly.a&quot; )                                                                                                                            </span><br><span class="line">#                                                                                                                                                                                                           </span><br><span class="line"># # Import target &quot;LLVMPolly&quot; for configuration &quot;RelWithDebInfo&quot;                                                                                                                                            </span><br><span class="line"># set_property(TARGET LLVMPolly APPEND PROPERTY IMPORTED_CONFIGURATIONS RELWITHDEBINFO)                                                                                                                     </span><br><span class="line"># set_target_properties(LLVMPolly PROPERTIES                                                                                                                                                                </span><br><span class="line">#   IMPORTED_LOCATION_RELWITHDEBINFO &quot;$&#123;_IMPORT_PREFIX&#125;/lib/LLVMPolly.so&quot;                                                                                                                                   </span><br><span class="line">#   IMPORTED_NO_SONAME_RELWITHDEBINFO &quot;TRUE&quot;                                                                                                                                                                </span><br><span class="line">#   )                                                                                                                                                                                                       </span><br><span class="line">#                                                                                                                                                                                                           </span><br><span class="line"># list(APPEND _IMPORT_CHECK_TARGETS LLVMPolly )                                                                                                                                                             </span><br><span class="line"># list(APPEND _IMPORT_CHECK_FILES_FOR_LLVMPolly &quot;$&#123;_IMPORT_PREFIX&#125;/lib/LLVMPolly.so&quot; )</span><br></pre></td></tr></table></figure></p>
-<h3 id="使用LLVM进行开发"><a href="#使用LLVM进行开发" class="headerlink" title="使用LLVM进行开发"></a>使用LLVM进行开发</h3><p>新建文件夹: <code>HowToUseJIT</code><br>目录结构如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">HowToUseJIT  </span><br><span class="line">    -- src</span><br><span class="line">        +  -- HowToUseJIT.cpp</span><br><span class="line">    -- CMakeLists.txt</span><br><span class="line">    -- build</span><br></pre></td></tr></table></figure></p>
-<p>在<code>HowToUseJIT</code>文件夹下进行如下操作:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd build</span><br><span class="line">cmake ..</span><br><span class="line">make</span><br></pre></td></tr></table></figure></p>
-<p><code>HowToUseJIT.cpp</code>和<code>CMakeLists.txt</code>文件可以自己根据LLVM提供的API自行开发，也可以使用下面所给的例子：<br><code>HowToUseJIT.cpp</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">#include &quot;llvm/IR/LLVMContext.h&quot;</span><br><span class="line">#include &quot;llvm/IR/Function.h&quot;</span><br><span class="line">#include &quot;llvm/IR/BasicBlock.h&quot;</span><br><span class="line">#include &quot;llvm/ADT/ArrayRef.h&quot;</span><br><span class="line">#include &quot;llvm/IR/Module.h&quot;</span><br><span class="line">#include &quot;llvm/IR/IRBuilder.h&quot;</span><br><span class="line">#include &lt;vector&gt;</span><br><span class="line">#include &lt;string&gt;</span><br><span class="line"> </span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">  llvm::LLVMContext &amp; context = llvm::getGlobalContext();</span><br><span class="line">  llvm::Module *module = new llvm::Module(&quot;asdf&quot;, context);</span><br><span class="line">  llvm::IRBuilder&lt;&gt; builder(context);</span><br><span class="line"> </span><br><span class="line">  llvm::FunctionType *funcType = llvm::FunctionType::get(builder.getVoidTy(), false);</span><br><span class="line">  llvm::Function *mainFunc = </span><br><span class="line">    llvm::Function::Create(funcType, llvm::Function::ExternalLinkage, &quot;main&quot;, module);</span><br><span class="line">  llvm::BasicBlock *entry = llvm::BasicBlock::Create(context, &quot;entrypoint&quot;, mainFunc);</span><br><span class="line">  builder.SetInsertPoint(entry);</span><br><span class="line"> </span><br><span class="line">  llvm::Value *helloWorld = builder.CreateGlobalStringPtr(&quot;hello world!\n&quot;);</span><br><span class="line"> </span><br><span class="line">  std::vector&lt;llvm::Type *&gt; putsArgs;</span><br><span class="line">  putsArgs.push_back(builder.getInt8Ty()-&gt;getPointerTo());</span><br><span class="line">  llvm::ArrayRef&lt;llvm::Type*&gt;  argsRef(putsArgs);</span><br><span class="line"> </span><br><span class="line">  llvm::FunctionType *putsType = </span><br><span class="line">    llvm::FunctionType::get(builder.getInt32Ty(), argsRef, false);</span><br><span class="line">  //llvm::Constant *putsFunc = module-&gt;getOrInsertFunction(&quot;puts&quot;, putsType);</span><br><span class="line">  llvm::Function *putsFunc = </span><br><span class="line">    llvm::Function::Create(putsType, llvm::Function::ExternalLinkage, &quot;puts&quot;, module);</span><br><span class="line">  llvm::BasicBlock *putsentry = llvm::BasicBlock::Create(context, &quot;entrypoint&quot;, putsFunc);</span><br><span class="line">  builder.SetInsertPoint(putsentry);</span><br><span class="line">  builder.CreateCall(putsFunc, helloWorld);</span><br><span class="line">  builder.CreateRetVoid();</span><br><span class="line">  module-&gt;dump();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><code>CMakeLists.txt</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">cmake_minimum_required(VERSION 2.8)</span><br><span class="line">project(llvm_test)</span><br><span class="line"></span><br><span class="line">set(LLVM_TARGETS_TO_BUILD X86)</span><br><span class="line">set(LLVM_BUILD_RUNTIME OFF)</span><br><span class="line">set(LLVM_BUILD_TOOLS OFF)</span><br><span class="line"></span><br><span class="line">find_package(LLVM REQUIRED CONFIG)</span><br><span class="line"></span><br><span class="line">message(STATUS &quot;Found LLVM $&#123;LLVM_INCLUDE_DIRS&#125;&quot;)</span><br><span class="line">message(STATUS &quot;Using LLVMConfig.cmake in: $&#123;LLVM_DIR&#125;&quot;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">SET (CMAKE_CXX_COMPILER_ENV_VAR &quot;clang++&quot;)</span><br><span class="line"></span><br><span class="line">SET (CMAKE_CXX_FLAGS &quot;-std=c++11&quot;)</span><br><span class="line">SET (CMAKE_CXX_FLAGS_DEBUG   &quot;-g&quot;)</span><br><span class="line">SET (CMAKE_CXX_FLAGS_MINSIZEREL  &quot;-Os -DNDEBUG&quot;)</span><br><span class="line">SET (CMAKE_CXX_FLAGS_RELEASE  &quot;-O4 -DNDEBUG&quot;)</span><br><span class="line">SET (CMAKE_CXX_FLAGS_RELWITHDEBINFO &quot;-O2 -g&quot;)</span><br><span class="line"></span><br><span class="line">SET(EXECUTABLE_OUTPUT_PATH $&#123;PROJECT_SOURCE_DIR&#125;/bin)</span><br><span class="line"></span><br><span class="line">include_directories($&#123;LLVM_INCLUDE_DIRS&#125;)</span><br><span class="line">add_definitions($&#123;LLVM_DEFINITIONS&#125;)</span><br><span class="line"></span><br><span class="line">file(GLOB_RECURSE source_files &quot;$&#123;CMAKE_CURRENT_SOURCE_DIR&#125;/src/*.cpp&quot;)</span><br><span class="line">add_executable(llvm_test $&#123;source_files&#125;)</span><br><span class="line">install(TARGETS llvm_test RUNTIME DESTINATION bin)</span><br><span class="line"></span><br><span class="line"># Find the libraries that correspond to the LLVM components</span><br><span class="line"># that we wish to use</span><br><span class="line">llvm_map_components_to_libnames(llvm_libs </span><br><span class="line">    Core</span><br><span class="line">    ExecutionEngine</span><br><span class="line">    Interpreter</span><br><span class="line">    MC</span><br><span class="line">    Support</span><br><span class="line">    nativecodegen)</span><br><span class="line"></span><br><span class="line"># Link against LLVM libraries</span><br><span class="line">target_link_libraries(llvm_test $&#123;llvm_libs&#125;)</span><br></pre></td></tr></table></figure></p>
-<p>如果编译通过说明LLVM开发环境搭建成功，如果报一些库文件缺失的错误有可能是因为默认LLVM文件夹的文件名为<code>llvm</code>而安装LLVM后自带的文件名为<code>llvm-3.8</code>可以根据报错内容对<code>/usr/share/llvm-3.8</code>或<code>usr/lib/llvm-3.8</code>的文件名进行修改 </p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LLVM/">LLVM</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
   
 </article>
 
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#摘要"><span class="toc-number">1.</span> <span class="toc-text">摘要</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#介绍"><span class="toc-number">2.</span> <span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#背景"><span class="toc-number">3.</span> <span class="toc-text">背景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#激励"><span class="toc-number">4.</span> <span class="toc-text">激励</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#A-正确性问题"><span class="toc-number">4.1.</span> <span class="toc-text">A. 正确性问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#B-公平性的问题"><span class="toc-number">4.2.</span> <span class="toc-text">B. 公平性的问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#C-矿工的影响"><span class="toc-number">4.3.</span> <span class="toc-text">C. 矿工的影响</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ZEUS"><span class="toc-number">5.</span> <span class="toc-text">ZEUS</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#A-标准化Solidity语法"><span class="toc-number">5.1.</span> <span class="toc-text">A. 标准化Solidity语法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#B-标准化规则语言"><span class="toc-number">5.2.</span> <span class="toc-text">B.标准化规则语言</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#C-可靠性"><span class="toc-number">5.3.</span> <span class="toc-text">C.可靠性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#D-通过CHCs执行符号检查"><span class="toc-number">5.4.</span> <span class="toc-text">D.通过CHCs执行符号检查</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#E-端到端的示例"><span class="toc-number">5.5.</span> <span class="toc-text">E.端到端的示例</span></a></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"ZEUS:Analyzing Safety of Smart Contracts　| EP's blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
 
 
 
@@ -418,9 +420,33 @@
 
 
 
+    
 
-  
-  
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2018/10/08/llvm/" title="下一篇: ubuntu下LLVM开发环境的配置">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/12/11/article/">ZEUS:Analyzing Safety of Smart Contracts</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/08/llvm/">ubuntu下LLVM开发环境的配置</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
