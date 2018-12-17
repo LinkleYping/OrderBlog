@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="EP&#39;s blog">
 <meta property="og:description" content="学习网站CTF WikiJarvis OJSUCTFpwnable.twpwnable.kr 查看二进制文件是32位系统还是64位系统1file filename 查看文件用了哪些保护机制12gdb filename(gdb) checksec 各种保护机制的作用Cannary: 栈溢出保护，用来缓解缓冲区溢出攻击，当启用栈保护以后，函数开始执行时会先在栈里面插入cookie信息，当函数真正的返回">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-13T01:34:52.998Z">
+<meta property="og:updated_time" content="2018-12-13T07:30:30.425Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="pwn学习笔记">
 <meta name="twitter:description" content="学习网站CTF WikiJarvis OJSUCTFpwnable.twpwnable.kr 查看二进制文件是32位系统还是64位系统1file filename 查看文件用了哪些保护机制12gdb filename(gdb) checksec 各种保护机制的作用Cannary: 栈溢出保护，用来缓解缓冲区溢出攻击，当启用栈保护以后，函数开始执行时会先在栈里面插入cookie信息，当函数真正的返回">
@@ -340,6 +340,8 @@
 <h2 id="各种保护机制的作用"><a href="#各种保护机制的作用" class="headerlink" title="各种保护机制的作用"></a>各种保护机制的作用</h2><p><code>Cannary</code>: 栈溢出保护，用来缓解缓冲区溢出攻击，当启用栈保护以后，函数开始执行时会先在栈里面插入cookie信息，当函数真正的返回的时候会验证cookie信息是否合法，如果不合法就停止运行程序<br><code>Fortify</code>: 也是为了防止缓冲区溢出攻击<br><code>NX(Windows平台称其为DEP)</code>: 不可执行，将数据所在的内页标记为不可执行，如果程序溢出成功转入shellcode时，程序会尝试在数据页面上执行指令，此时CPU就会抛出异常，而不会执行恶意指令。<br><code>PIE(ASLR)</code>: ASLR:地址随机化。PIE:Position Independent Executables位置独立的可执行区域。  </p>
 <h2 id="二进制文件中的函数查找"><a href="#二进制文件中的函数查找" class="headerlink" title="二进制文件中的函数查找"></a>二进制文件中的函数查找</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">readelf -a libc-2.19.so | grep &quot;system&quot;</span><br></pre></td></tr></table></figure>
 <h2 id="二进制文件中的字符串查找"><a href="#二进制文件中的字符串查找" class="headerlink" title="二进制文件中的字符串查找"></a>二进制文件中的字符串查找</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">strings -a -t x libc-2.19.so | grep &quot;/bin/sh&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="pwndbg工具在docker中的使用"><a href="#pwndbg工具在docker中的使用" class="headerlink" title="pwndbg工具在docker中的使用"></a>pwndbg工具在docker中的使用</h2><p>docker run -it \<br>—rm \<br>-h ${ctf_name} \<br>—name ${ctf_name} \<br>-v $(pwd)/${ctf_name}:/ctf/work \<br>-p 23946:23946 \<br>—cap-add=SYS_PTRACE \<br>skysider/pwndocker</p>
+
       
     </div>
     
@@ -378,6 +380,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/12/13/re-notes/" rel="prev" title="逆向笔记">
+                逆向笔记 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -454,7 +460,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -465,7 +471,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -476,7 +482,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -509,7 +515,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#学习网站"><span class="nav-number">1.</span> <span class="nav-text">学习网站</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看二进制文件是32位系统还是64位系统"><span class="nav-number">2.</span> <span class="nav-text">查看二进制文件是32位系统还是64位系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看文件用了哪些保护机制"><span class="nav-number">3.</span> <span class="nav-text">查看文件用了哪些保护机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#各种保护机制的作用"><span class="nav-number">4.</span> <span class="nav-text">各种保护机制的作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二进制文件中的函数查找"><span class="nav-number">5.</span> <span class="nav-text">二进制文件中的函数查找</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二进制文件中的字符串查找"><span class="nav-number">6.</span> <span class="nav-text">二进制文件中的字符串查找</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#学习网站"><span class="nav-number">1.</span> <span class="nav-text">学习网站</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看二进制文件是32位系统还是64位系统"><span class="nav-number">2.</span> <span class="nav-text">查看二进制文件是32位系统还是64位系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看文件用了哪些保护机制"><span class="nav-number">3.</span> <span class="nav-text">查看文件用了哪些保护机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#各种保护机制的作用"><span class="nav-number">4.</span> <span class="nav-text">各种保护机制的作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二进制文件中的函数查找"><span class="nav-number">5.</span> <span class="nav-text">二进制文件中的函数查找</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二进制文件中的字符串查找"><span class="nav-number">6.</span> <span class="nav-text">二进制文件中的字符串查找</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pwndbg工具在docker中的使用"><span class="nav-number">7.</span> <span class="nav-text">pwndbg工具在docker中的使用</span></a></li></ol></div>
             
 
           </div>
