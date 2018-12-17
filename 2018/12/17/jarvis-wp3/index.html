@@ -79,21 +79,22 @@
 
 
 
-<meta name="description" content="PEiD是一个经典的查壳程序,其插件数量远超百种,使它具备了各种功能,例如通用脱壳和针对性脱壳.虽然已经停止更新,但是特征,签名检测等技术没有失效,你只需要给予其新的特征识别库即可用于新壳的检测.  什么时候需要使用PEiD 快速鉴定一个程序是否正常?  它的入口点是什么?  用什么工具开发的  是否被加了已知壳?  查看它的反汇编代码  PE头结构  脱简易的壳使用图中红色方框中的内容表示文件用">
+<meta name="description" content="使用file指令查看文件属性1234$file ctf2ctf2: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 2.6.18, BuildID[sha1]=ae99a50022c1d9d3bf96">
 <meta name="keywords" content="逆向">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PEiD的使用">
-<meta property="og:url" content="https://LinkleYping.github.io/2018/12/17/peid/index.html">
+<meta property="og:title" content="JarvisOJ_stheasy">
+<meta property="og:url" content="https://LinkleYping.github.io/2018/12/17/jarvis-wp3/index.html">
 <meta property="og:site_name" content="EP&#39;s blog">
-<meta property="og:description" content="PEiD是一个经典的查壳程序,其插件数量远超百种,使它具备了各种功能,例如通用脱壳和针对性脱壳.虽然已经停止更新,但是特征,签名检测等技术没有失效,你只需要给予其新的特征识别库即可用于新壳的检测.  什么时候需要使用PEiD 快速鉴定一个程序是否正常?  它的入口点是什么?  用什么工具开发的  是否被加了已知壳?  查看它的反汇编代码  PE头结构  脱简易的壳使用图中红色方框中的内容表示文件用">
+<meta property="og:description" content="使用file指令查看文件属性1234$file ctf2ctf2: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 2.6.18, BuildID[sha1]=ae99a50022c1d9d3bf96">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://linkleyping.github.io/2018/12/17/peid/PEiD_1.png">
-<meta property="og:image" content="https://linkleyping.github.io/2018/12/17/peid/PEiD_2.png">
-<meta property="og:updated_time" content="2018-12-17T07:26:20.222Z">
+<meta property="og:image" content="https://linkleyping.github.io/2018/12/17/jarvis-wp3/sth_1.png">
+<meta property="og:image" content="https://linkleyping.github.io/2018/12/17/jarvis-wp3/sth_2.png">
+<meta property="og:image" content="https://linkleyping.github.io/2018/12/17/jarvis-wp3/sth_3.png">
+<meta property="og:updated_time" content="2018-12-17T10:29:02.972Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PEiD的使用">
-<meta name="twitter:description" content="PEiD是一个经典的查壳程序,其插件数量远超百种,使它具备了各种功能,例如通用脱壳和针对性脱壳.虽然已经停止更新,但是特征,签名检测等技术没有失效,你只需要给予其新的特征识别库即可用于新壳的检测.  什么时候需要使用PEiD 快速鉴定一个程序是否正常?  它的入口点是什么?  用什么工具开发的  是否被加了已知壳?  查看它的反汇编代码  PE头结构  脱简易的壳使用图中红色方框中的内容表示文件用">
-<meta name="twitter:image" content="https://linkleyping.github.io/2018/12/17/peid/PEiD_1.png">
+<meta name="twitter:title" content="JarvisOJ_stheasy">
+<meta name="twitter:description" content="使用file指令查看文件属性1234$file ctf2ctf2: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 2.6.18, BuildID[sha1]=ae99a50022c1d9d3bf96">
+<meta name="twitter:image" content="https://linkleyping.github.io/2018/12/17/jarvis-wp3/sth_1.png">
 
 
 
@@ -123,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://LinkleYping.github.io/2018/12/17/peid/">
+  <link rel="canonical" href="https://LinkleYping.github.io/2018/12/17/jarvis-wp3/">
 
 
 
 
 
-  <title>PEiD的使用 | EP's blog</title>
+  <title>JarvisOJ_stheasy | EP's blog</title>
   
 
 
@@ -248,7 +249,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://LinkleYping.github.io/2018/12/17/peid/">
+    <link itemprop="mainEntityOfPage" href="https://LinkleYping.github.io/2018/12/17/jarvis-wp3/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="EP">
@@ -265,7 +266,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">PEiD的使用</h1>
+          <h1 class="post-title" itemprop="name headline">JarvisOJ_stheasy</h1>
         
 
         <div class="post-meta">
@@ -277,7 +278,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-17T09:35:43+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-17T17:37:04+08:00">
                 2018-12-17
               </time>
             
@@ -300,8 +301,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/逆向-工具/" itemprop="url" rel="index">
-                    <span itemprop="name">逆向_工具</span>
+                  <a href="/categories/WriteUP/" itemprop="url" rel="index">
+                    <span itemprop="name">WriteUP</span>
                   </a>
                 </span>
 
@@ -337,16 +338,11 @@
       
 
       
-        <p>PEiD是一个经典的查壳程序,其插件数量远超百种,使它具备了各种功能,例如通用脱壳和针对性脱壳.虽然已经停止更新,但是特征,签名检测等技术没有失效,你只需要给予其新的特征识别库即可用于新壳的检测. </p>
-<h2 id="什么时候需要使用PEiD"><a href="#什么时候需要使用PEiD" class="headerlink" title="什么时候需要使用PEiD"></a>什么时候需要使用PEiD</h2><ol>
-<li>快速鉴定一个程序是否正常? </li>
-<li>它的入口点是什么? </li>
-<li>用什么工具开发的 </li>
-<li>是否被加了已知壳? </li>
-<li>查看它的反汇编代码 </li>
-<li>PE头结构 </li>
-<li>脱简易的壳<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><img src="PEiD_1.png" alt="Alt text" title="PEiD界面截图"><br>图中红色方框中的内容表示文件用什么软件编写的，或者用什么软件加壳。这里表示是用C#编写的。<br><img src="PEiD_2.png" alt="Alt text" title="加壳信息截图"><br>如果是未知软件，点击红色方框可以显示有没有加壳，具体信息需要点击弹出框中的绿色框中的按钮。</li>
-</ol>
+        <h2 id="使用file指令查看文件属性"><a href="#使用file指令查看文件属性" class="headerlink" title="使用file指令查看文件属性"></a>使用file指令查看文件属性</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$file ctf2</span><br><span class="line">ctf2: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), </span><br><span class="line">dynamically linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 2.6.18, </span><br><span class="line">BuildID[sha1]=ae99a50022c1d9d3bf96c045151d1edcdab9af94, stripped</span><br></pre></td></tr></table></figure>
+<h2 id="在linux下尝试运行"><a href="#在linux下尝试运行" class="headerlink" title="在linux下尝试运行"></a>在linux下尝试运行</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ./ctf2</span><br><span class="line">Input flag:jdijif</span><br><span class="line">Flag is wrong.</span><br></pre></td></tr></table></figure>
+<h2 id="在IDA32下打开"><a href="#在IDA32下打开" class="headerlink" title="在IDA32下打开"></a>在IDA32下打开</h2><p>main函数的伪代码:<br><img src="sth_1.png" alt="Alt text" title="main函数伪代码"><br>红色方框中是进行匹配的函数名称<br>sub_8048530()函数伪代码:<br><img src="sth_2.png" alt="Alt text" title="sub_8048530函数伪代码"><br>所求的flag与数组byte_8049B15和字符串byte_8049AE0有关，它们具体的值如下：<br><img src="sth_3.png" alt="Alt text" title="字符串与数组的值"><br>红色方框为字符串，蓝色方框为数组的值</p>
+<h2 id="可以根据下列代码解出flag"><a href="#可以根据下列代码解出flag" class="headerlink" title="可以根据下列代码解出flag"></a>可以根据下列代码解出flag</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">num = [0x48, 0x5D, 0x8D, 0x24, 0x84, 0x27, 0x99, 0x9F, 0x54, 0x18, \</span><br><span class="line">    0x1E, 0x69, 0x7E, 0x33, 0x15, 0x72, 0x8D, 0x33, 0x24, 0x63, 0x21, \</span><br><span class="line">    0x54, 0x0C, 0x78, 0x78, 0x78, 0x78, 0x78, 0x1B, 0x0]</span><br><span class="line">s = &apos;ak2j9Gh&#125;AgfY4ds-a6QW1#k5ER_T[cvLbV7nOm3ZeX&#123;CMt8SZo]U&apos;</span><br><span class="line">f = &apos;&apos;</span><br><span class="line">print len(s)</span><br><span class="line">for i in range(29):</span><br><span class="line">    f = f + s[num[i] / 3 - 2]</span><br><span class="line">print f</span><br></pre></td></tr></table></figure>
+<p>运行出来flag的值为:<br>kctf{YoU_hAVe-GOt-fLg_233333}</p>
 
       
     </div>
@@ -377,8 +373,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/13/re-notes/" rel="next" title="逆向笔记">
-                <i class="fa fa-chevron-left"></i> 逆向笔记
+              <a href="/2018/12/17/jarvis-wp2/" rel="next" title="JarvisOJ_FindKey">
+                <i class="fa fa-chevron-left"></i> JarvisOJ_FindKey
               </a>
             
           </div>
@@ -386,10 +382,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/12/17/jarvis-wp1/" rel="prev" title="JarvisOJ_CrackMe">
-                JarvisOJ_CrackMe <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -521,7 +513,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么时候需要使用PEiD"><span class="nav-number">1.</span> <span class="nav-text">什么时候需要使用PEiD</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用"><span class="nav-number">2.</span> <span class="nav-text">使用</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用file指令查看文件属性"><span class="nav-number">1.</span> <span class="nav-text">使用file指令查看文件属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在linux下尝试运行"><span class="nav-number">2.</span> <span class="nav-text">在linux下尝试运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在IDA32下打开"><span class="nav-number">3.</span> <span class="nav-text">在IDA32下打开</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可以根据下列代码解出flag"><span class="nav-number">4.</span> <span class="nav-text">可以根据下列代码解出flag</span></a></li></ol></div>
             
 
           </div>
