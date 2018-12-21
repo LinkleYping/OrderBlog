@@ -1822,7 +1822,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #cbff2f;
+  background: #ffff93;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2937,4 +2937,60 @@ hr {
 }
 .highlight:hover .btn-copy {
   opacity: 1;
+}
+.post {
+  margin-top: 60px;
+  margin-bottom: -50px;
+  padding: 25px;
+  -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
+  -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
+}
+body {
+  background-color: #fcfae8;
+  background-image: url("/images/body_inner_bg.gif");
+  background-repeat: repeat;
+  color: #9e7f71;
+}
+.header {
+  display: block;
+  background: transparent;
+  background-image: url("/images/header.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+  padding: 12px 0;
+}
+.main-inner {
+  margin-top: 60px;
+  padding: 60px 60px 60px 60px;
+  background: #faf7e6;
+  opacity: 0.9;
+  min-height: 500px;
+}
+.footer {
+  background: transparent;
+  background-image: url("/images/footer_inner_bg.gif");
+  background-repeat: no-repeat;
+  background-size: auto auto;
+  overflow: hidden;
+  padding-bottom: 10px;
+  padding: 28px 0;
+  position: relative;
+  text-align: center;
+  width: auto;
+  margin-top: -70px;
+}
+.footer-inner {
+  text-align: center;
+}
+#sidebar {
+  background: url("/images/slider.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: none;
+}
+#sidebar p,
+#sidebar span,
+#sidebar a {
+  color: #fff;
 }
