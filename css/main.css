@@ -1822,7 +1822,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #9dff20;
+  background: #29ffe8;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2966,14 +2966,13 @@ body {
 .footer {
   background: transparent;
   background-image: url("/images/footer_inner_bg.gif");
+  background-position: center top;
   background-repeat: no-repeat;
   background-size: auto auto;
   overflow: hidden;
   padding-bottom: 10px;
   padding: 28px 0;
-  position: relative;
   text-align: center;
-  width: auto;
   margin-top: -70px;
 }
 .footer-inner {
@@ -2993,4 +2992,16 @@ body {
 }
 .posts-expand .post-tags a {
   background: none;
+}
+#local-search-result {
+  background: url("/images/search.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#local-search-result a {
+  color: #faf7e6;
+}
+#local-search-result p {
+  color: #faf7e6;
 }
