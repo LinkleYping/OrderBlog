@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="正则表达式,Python,">
 
 
 
@@ -79,13 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="EP&#39;s blog">
-<meta property="og:url" content="https://LinkleYping.github.io/archives/2018/page/2/index.html">
+<meta name="description" content="Python中正则表达式re的sub方法">
+<meta name="keywords" content="正则表达式,Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="re_sub">
+<meta property="og:url" content="https://LinkleYping.github.io/2019/05/01/re-sub/index.html">
 <meta property="og:site_name" content="EP&#39;s blog">
+<meta property="og:description" content="Python中正则表达式re的sub方法">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-05-01T12:21:32.921Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="EP&#39;s blog">
+<meta name="twitter:title" content="re_sub">
+<meta name="twitter:description" content="Python中正则表达式re的sub方法">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://LinkleYping.github.io/archives/2018/page/2/">
+  <link rel="canonical" href="https://LinkleYping.github.io/2019/05/01/re-sub/">
 
 
 
 
 
-  <title>归档 | EP's blog</title>
+  <title>re_sub | EP's blog</title>
   
 
 
@@ -140,7 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <a href="https://github.com/LinkleYping"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -276,76 +281,196 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
-
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        嗯..! 目前共计 13 篇日志。 继续努力。
-      </span>
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
-
-        
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://LinkleYping.github.io/2019/05/01/re-sub/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="EP">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EP's blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/10/08/llvm/" itemprop="url">
-              
-                <span itemprop="name">ubuntu下LLVM开发环境的配置</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">re_sub</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-10-08T19:56:14+08:00" content="2018-10-08">
-          10-08
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-01T20:01:44+08:00">
+                2019-05-01
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  Python中正则表达式re的sub方法
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+      
 
+      
+        <h2 id="re-sub的功能"><a href="#re-sub的功能" class="headerlink" title="re.sub的功能"></a>re.sub的功能</h2><p>re是regular expression的所写，表示正则表达式<br>sub是substitute的所写，表示替换；<br>re.sub是个正则表达式方面的函数，用来实现通过正则表达式，实现比普通字符串的replace更加强大的替换功能；<br>举个最简单的例子：<br>如果输入字符串是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">inputStr = &quot;hello 111 world 111&quot;</span><br></pre></td></tr></table></figure></p>
+<p>那么你可以通过<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">replacedStr = inputStr.replace(&quot;111&quot;, &quot;222&quot;)</span><br></pre></td></tr></table></figure></p>
+<p>去换成<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;hello 222 world 222&quot;</span><br></pre></td></tr></table></figure></p>
+<p>但是，如果输入字符串是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">inputStr = &quot;hello 123 world 456&quot;</span><br></pre></td></tr></table></figure></p>
+<p>而你是想把123和456，都换成222<br>那么就没法直接通过字符串的replace达到这一目的了。<br>就需要借助于re.sub，通过正则表达式，来实现这种相对复杂的字符串的替换：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">replacedStr = re.sub(&quot;\d+&quot;, &quot;222&quot;, inputStr)</span><br></pre></td></tr></table></figure></p>
+<p>当然，实际情况中，会有比这个例子更加复杂的，其他各种特殊情况，就只能通过此re.sub去实现如此复杂的替换的功能了。<br>所以，re.sub的含义，作用，功能就是：<br>对于输入的一个字符串，利用正则表达式（的强大的字符串处理功能），去实现（相对复杂的）字符串替换处理，然后返回被替换后的字符串<br>其中re.sub还支持各种参数，比如count指定要替换的个数等等。  </p>
+<h2 id="re-sub的各个参数的详细解释"><a href="#re-sub的各个参数的详细解释" class="headerlink" title="re.sub的各个参数的详细解释"></a>re.sub的各个参数的详细解释</h2><p>re.sub共有五个参数。<br>其中三个必选参数：pattern, repl, string<br>两个可选参数：count, flags  </p>
+<h3 id="第一个参数：pattern"><a href="#第一个参数：pattern" class="headerlink" title="第一个参数：pattern"></a>第一个参数：pattern</h3><p>pattern: 表示正则中的模式字符串<br>反斜杠加数字（\N），则对应着匹配的组（matched group）<br>比如\6，表示匹配前面pattern中的第6个group<br>意味着，pattern中，前面肯定是存在对应的，第6个group，然后你后面也才能去引用<br>比如，想要处理：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hello crifan, nihao crifan</span><br></pre></td></tr></table></figure></p>
+<p>且此处的，前后的crifan，肯定是一样的。<br>而想要把整个这样的字符串，换成crifanli<br>则就可以这样的re.sub实现替换：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">inputStr = &quot;hello crifan, nihao crifan&quot;;</span><br><span class="line">replacedStr = re.sub(r&quot;hello (\w+), nihao \1&quot;, &quot;crifanli&quot;, inputStr);</span><br><span class="line">print &quot;replacedStr=&quot;,replacedStr; #crifanli</span><br></pre></td></tr></table></figure></p>
+<h3 id="第二个参数：repl"><a href="#第二个参数：repl" class="headerlink" title="第二个参数：repl"></a>第二个参数：repl</h3><p>repl可以是字符串，也可以是函数。<br><strong>repl是字符串</strong><br>如果repl是字符串的话，其中的任何反斜杠转义字符，都会被处理的<br>\n：会被处理为对应的换行符；<br>\r：会被处理为回车符；<br>其他不能识别的转移字符，则只是被识别为普通的字符：<br>比如\j，会被处理为j这个字母本身；<br>反斜杠加g以及中括号内一个名字，即：<code>\g&lt;name&gt;</code>，对应着命了名的组，named group<br>接着上面的举例：<br>想要把对应的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hello crifan, nihao crifan</span><br></pre></td></tr></table></figure></p>
+<p>中的crifan提取出来，只剩：crifan<br>就可以写成：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">inputStr = <span class="string">"hello crifan, nihao crifan"</span>;</span><br><span class="line">replacedStr = re.sub(<span class="string">r"hello (\w+), nihao \1"</span>, <span class="string">"\g&lt;1&gt;"</span>, inputStr);</span><br><span class="line"><span class="keyword">print</span> <span class="string">"replacedStr="</span>,replacedStr; <span class="comment">#crifan</span></span><br></pre></td></tr></table></figure></p>
+<p>对应的带命名的组（named group）的版本是：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">inputStr = <span class="string">"hello crifan, nihao crifan"</span>;</span><br><span class="line">replacedStr = re.sub(<span class="string">r"hello (?P&lt;name&gt;\w+), nihao (?P=name)"</span>, <span class="string">"\g&lt;name&gt;"</span>, inputStr);</span><br><span class="line"><span class="keyword">print</span> <span class="string">"replacedStr="</span>,replacedStr; <span class="comment">#crifan</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>repl是函数</strong><br>举例说明：<br>比如输入内容是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hello 123 world 456</span><br></pre></td></tr></table></figure></p>
+<p>想要把其中的数字部分，都加上111，变成：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hello 234 world 567</span><br></pre></td></tr></table></figure></p>
+<p>那么就可以写成：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> re;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">pythonReSubDemo</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">        demo Pyton re.sub</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    inputStr = <span class="string">"hello 123 world 456"</span>;</span><br><span class="line">     </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_add111</span><span class="params">(matched)</span>:</span></span><br><span class="line">        intStr = matched.group(<span class="string">"number"</span>); <span class="comment">#123</span></span><br><span class="line">        intValue = int(intStr);</span><br><span class="line">        addedValue = intValue + <span class="number">111</span>; <span class="comment">#234</span></span><br><span class="line">        addedValueStr = str(addedValue);</span><br><span class="line">        <span class="keyword">return</span> addedValueStr;</span><br><span class="line">         </span><br><span class="line">    replacedStr = re.sub(<span class="string">"(?P&lt;number&gt;\d+)"</span>, _add111, inputStr);</span><br><span class="line">    <span class="keyword">print</span> <span class="string">"replacedStr="</span>,replacedStr; <span class="comment">#hello 234 world 567</span></span><br><span class="line"> </span><br><span class="line"><span class="comment">###############################################################################</span></span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">"__main__"</span>:</span><br><span class="line">    pythonReSubDemo();</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line"><span class="comment">### 第三个参数：string</span></span><br><span class="line">string，即表示要被处理，要被替换的那个string字符串。</span><br><span class="line"></span><br><span class="line"><span class="comment">### 第四个参数：count</span></span><br><span class="line">举例说明,比如对于：</span><br></pre></td></tr></table></figure></p>
+<p>hello 123 world 456 nihao 789<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">只是像要处理前面两个数字：123,456，分别给他们加111，而不处理789  </span><br><span class="line">那么就可以写成：  </span><br><span class="line">```Python</span><br><span class="line">#!/usr/bin/python</span><br><span class="line"># -*- coding: utf-8 -*-</span><br><span class="line">import re;</span><br><span class="line"> </span><br><span class="line">def pythonReSubDemo():</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">        demo Pyton re.sub</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    inputStr = &quot;hello 123 world 456 nihao 789&quot;;</span><br><span class="line">     </span><br><span class="line">    def _add111(matched):</span><br><span class="line">        intStr = matched.group(&quot;number&quot;); #123</span><br><span class="line">        intValue = int(intStr);</span><br><span class="line">        addedValue = intValue + 111; #234</span><br><span class="line">        addedValueStr = str(addedValue);</span><br><span class="line">        return addedValueStr;</span><br><span class="line">         </span><br><span class="line">    replacedStr = re.sub(&quot;(?P&lt;number&gt;\d+)&quot;, _add111, inputStr, 2);</span><br><span class="line">    print &quot;replacedStr=&quot;,replacedStr; #hello 234 world 567 nihao 789</span><br><span class="line"> </span><br><span class="line">###############################################################################</span><br><span class="line">if __name__==&quot;__main__&quot;:</span><br><span class="line">    pythonReSubDemo();</span><br></pre></td></tr></table></figure></p>
+<h2 id="关于re-sub的注意事项"><a href="#关于re-sub的注意事项" class="headerlink" title="关于re.sub的注意事项"></a>关于re.sub的注意事项</h2><p>要注意，被替换的字符串，即参数repl，是普通的字符串，不是pattern<br>注意到，语法是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">re.sub(pattern, repl, string, count=0, flags=0)</span><br></pre></td></tr></table></figure></p>
+<p>即，对应的第二个参数是repl。<br>需要你指定对应的r前缀，才是pattern：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">r&quot;xxxx&quot;</span><br></pre></td></tr></table></figure></p>
+<p>不要误把第四个参数flag的值，传递到第三个参数count中了<br>当传递第三个参数，原以为是flag的值是，<br>结果实际上是count的值<br>所以导致re.sub不功能，<br>所以要参数指定清楚了：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">replacedStr = re.sub(replacePattern, orignialStr, replacedPartStr, flags=re.I); # can omit count parameter</span><br></pre></td></tr></table></figure></p>
+<p>或：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">replacedStr = re.sub(replacePattern, orignialStr, replacedPartStr, 1, re.I); # must designate count parameter</span><br></pre></td></tr></table></figure></p>
+<p>才可以正常工作。</p>
+<p>转载：<a href="https://www.crifan.com/python_re_sub_detailed_introduction/" target="_blank" rel="noopener">https://www.crifan.com/python_re_sub_detailed_introduction/</a></p>
+
+      
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/正则表达式/" rel="tag"><i class="fa fa-tag"></i> 正则表达式</a>
+          
+            <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/27/ubuntu/" rel="next" title="ubuntu">
+                <i class="fa fa-chevron-left"></i> ubuntu
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/archives/2018/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/archives/2018/">1</a><span class="page-number current">2</span>
-  </nav>
+  </article>
 
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -353,6 +478,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -373,8 +502,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -456,6 +594,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#re-sub的功能"><span class="nav-number">1.</span> <span class="nav-text">re.sub的功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#re-sub的各个参数的详细解释"><span class="nav-number">2.</span> <span class="nav-text">re.sub的各个参数的详细解释</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一个参数：pattern"><span class="nav-number">2.1.</span> <span class="nav-text">第一个参数：pattern</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二个参数：repl"><span class="nav-number">2.2.</span> <span class="nav-text">第二个参数：repl</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于re-sub的注意事项"><span class="nav-number">3.</span> <span class="nav-text">关于re.sub的注意事项</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -584,6 +738,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

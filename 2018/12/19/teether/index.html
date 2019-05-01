@@ -87,10 +87,12 @@
 <meta property="og:site_name" content="EP&#39;s blog">
 <meta property="og:description" content="TEETHER:自动利用智能合约">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-19T14:12:35.540Z">
+<meta property="og:image" content="https://linkleyping.github.io/2018/12/19/teether/teether/1.png">
+<meta property="og:updated_time" content="2019-01-08T01:09:29.835Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TEETHER:Gnawing at ethereum to Automatically Exploit Smart Contracts">
 <meta name="twitter:description" content="TEETHER:自动利用智能合约">
+<meta name="twitter:image" content="https://linkleyping.github.io/2018/12/19/teether/teether/1.png">
 
 
 
@@ -392,7 +394,23 @@
 <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>这个工具主要用来实现自动化漏洞注入，假设攻击者无任何特权。对合约漏洞进行定义，合约中价值的转移只在少数情况下发生。为此定义了四种标准：可以用来创建常规交易的(CALL)，用来结束合约的(SELFDESTRUCT)，两个可以引起代码注入的(CALLCODE, DELEGATECALL)<br>我们提出了一种方法来找到一个合约中的漏洞执行路径，并且使用符号执行来自动化生成一个注入。方法如下: 我们在合约的控制流图中寻找关键路径，然后确定参数可以被攻击者控制的关键指令。一旦确定了一条路径，我们利用符号执行将这条路径转化成一系列的约束条件。使用约束条件求解器我们就可以推断攻击者必须执行哪些事务来触发漏洞。智能合约的特定执行环境使这个任务并不简单。值得注意的是，我们展示了如何符号化地处理哈希值，这些哈希值在智能合约中被广泛使用。<br>为了评估我们方法的实用性，我们对区块链上38757个合约进行了大规模分析。TEETHER发现了815个合约可以被自动化注入，不需要人工交互和确定，并且不需要合约的源代码。因为代码共享，这使1731个账户处于危险之中。更进一步，示例表明，许多这些潜在的漏洞是由于Solidity的设计机制和对EVM执行模式的误解导致的。<br>主要贡献:<br>1.在低级的EVM指令上，提出了一个漏洞合约的广泛定义。<br>2.基于智能合约字节码提出了一个端到端的自动化注入工具。最后我们还处理了一些EVM的特定挑战，比如说符号化地处理哈希值的新方法。<br>3.使用这个工具对智能合约进行了大规模的分析。</p>
 <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>在这部分介绍智能合约，以太坊虚拟机和智能合约的执行模式。</p>
 <h3 id="交易系统"><a href="#交易系统" class="headerlink" title="交易系统"></a>交易系统</h3><p>用户在转账和调用合约的时候发起交易，矿工处理交易并且使用共识协议确认新出的块。矿工挖块会获得处理费，为了防止拒绝服务攻击和鼓励矿工出块。区块链上的每个节点都可以验证目前的系统状态。</p>
-<h3 id="智能合约"><a href="#智能合约" class="headerlink" title="智能合约"></a>智能合约</h3><p>智能合约是与特定代码片段相关的以太坊账户，每个智能合约都有私有存储，</p>
+<h3 id="智能合约"><a href="#智能合约" class="headerlink" title="智能合约"></a>智能合约</h3><p>智能合约是与特定代码片段相关的以太坊账户，每个智能合约都有私有存储，虽然私有存储空间的内容只有合约本身可以读写，但是通过分析区块链上每一笔交易依然可以重构合约私有存储中的内容。</p>
+<h4 id="EVM"><a href="#EVM" class="headerlink" title="EVM"></a>EVM</h4><p>EVM是一个256比特的堆栈虚拟机。除了算术指令和控制流指令，EVM还提供特定指令来获取当前交易的访问字段、更改合约的私有存储、查询当前区块链状态和创建下一笔交易。</p>
+<h2 id="Smart-Contract-Vulnerabilities"><a href="#Smart-Contract-Vulnerabilities" class="headerlink" title="Smart Contract Vulnerabilities"></a>Smart Contract Vulnerabilities</h2><p>分析方法：静态地分析契约的代码，以揭示可能被滥用来窃取契约中存储的Ether的关键代码部分。</p>
+<h3 id="Critical-Instructions"><a href="#Critical-Instructions" class="headerlink" title="Critical Instructions"></a>Critical Instructions</h3><p>确定了四条EVM指令，如果想从合约中提取Ether必须执行其中的一种。这四条指令可以分为两类：有两条指令可以直接转账，另外两条允许在合约上下文中执行任意Ethereum字节码。</p>
+<h4 id="Direct-value-transfer"><a href="#Direct-value-transfer" class="headerlink" title="Direct value transfer"></a>Direct value transfer</h4><p>CALL和SELFDESTRUCT可以允许直接转账到一个指定的地址，CALL指令执行的时候会栈中会有如下参数：</p>
+<ol>
+<li>gas—在交易期间可能消耗的gas</li>
+<li>to—交易的收款方</li>
+<li>value—转账金额<br>4-7. in offset, in size, out offset, out size—内存位置和调用数据长度分别返回数据 ///<br>如果攻击者可以控制第二个栈内参数并且第三个参数非零，那么就可以达到攻击的目的。<br>SELFDESTRUCT指令可以在销毁合约的同时将合约的余额转到指定的地址。<h4 id="Code-injection"><a href="#Code-injection" class="headerlink" title="Code injection"></a>Code injection</h4>CALLCoDE和DELEGATECALL指令会导致在合约上下文中执行第三方代码。如果攻击者可以控制CALLCODE或者DELEGATECALL指令的to，那么就可以在合约中执行to合约中的第三方代码。<h4 id="Vulnerable-State"><a href="#Vulnerable-State" class="headerlink" title="Vulnerable State"></a>Vulnerable State</h4>定义合约的危险状态：<br><strong>Def1(Critical Path)</strong>: </li>
+<li>CALL指令执行时，第三个栈参数非零并且第二个栈参数可以被控制。</li>
+<li>SELFDESTRUCT指令执行的时候第一个栈参数可以被控制。</li>
+<li>CALLCODE或者DELEGATECALL指令执行的时候第二个栈参数可以被控制。<br><strong>Def2(Vulnerable State)</strong>:<br>如果某个交易可以执行Critical Path那么就是Vulnarable State<h3 id="Storage"><a href="#Storage" class="headerlink" title="Storage"></a>Storage</h3>参考以下合约：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">contract Stateful</span><br><span class="line">&#123;</span><br><span class="line">    bool vulnerabel = <span class="literal">false</span>;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">makeVulnerable</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        vulnerable = <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">exploit</span>(<span class="params">address attacker</span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="built_in">require</span>(vulnerabel);</span><br><span class="line">        attacker.transfer(<span class="keyword">this</span>.balance);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>当<code>vulnerable</code>变量等于<code>false</code>的时候直接调用exploit函数并不能攻击成功，但是在调用<code>makeVulnerable</code>函数后就会到达vulnerable状态。所以我们必须扩展我们的定义，以包含状态的概念，它捕获对合约存储所做的修改。<br>唯一能够更改存储的指令就是<code>SSTORE</code>，定义<code>state-changing transactions</code><br><strong>Def3(State Changing Path)</strong><br>至少包含一条<code>SSTORE</code>指令<br><strong>Def4(State Changing Transaction)</strong><br>如果一个交易的执行路径是一个<code>State Changing Path</code><br>将上述与<code>Def2</code>结合可以给出以下定义：<br><strong>Def5(Vulnerable)</strong><br>如果一个合约中存在一系列能够导致vulnerabel state的state changing transaction<br>一个成功的auto exploit是由一系列导致状态更改的关键交易组成。</p>
+<h2 id="Automatic-Exploitation"><a href="#Automatic-Exploitation" class="headerlink" title="Automatic Exploitation"></a>Automatic Exploitation</h2><p><img src="teether/1.png" alt=""><br>第一步，CFG发现模型反编译EVM字节码然后重构控制流图(CFG).然后扫描控制流图获取critical instruction和state changing instruction。Path generation模型从CFG的根部获取达到这些指令的路径，constraint generation模型使用符号执行生成一系列的路径约束。最后exploit generation模型解决critical path和state changing path约束来生成exploit。</p>
+<h3 id="CFG-Recovery"><a href="#CFG-Recovery" class="headerlink" title="CFG Recovery"></a>CFG Recovery</h3><p>EVM使用不直接的跳转提供控制流指令，有条件的<code>JUMPI</code>和无条件的<code>JUMP</code>都从栈顶读取跳转目的地。跳转目的地在某些情况下可以轻松得到，比如说<code>PUSH2 &lt;addr&gt;;JUMP</code>，但是在某些情况下也不那么明显。</p>
 
       
     </div>
@@ -434,6 +452,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/27/ubuntu/" rel="prev" title="ubuntu">
+                ubuntu <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -510,7 +532,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -521,7 +543,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -532,7 +554,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -587,7 +609,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#摘要"><span class="nav-number">1.</span> <span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍"><span class="nav-number">2.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#背景"><span class="nav-number">3.</span> <span class="nav-text">背景</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#交易系统"><span class="nav-number">3.1.</span> <span class="nav-text">交易系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#智能合约"><span class="nav-number">3.2.</span> <span class="nav-text">智能合约</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#摘要"><span class="nav-number">1.</span> <span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍"><span class="nav-number">2.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#背景"><span class="nav-number">3.</span> <span class="nav-text">背景</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#交易系统"><span class="nav-number">3.1.</span> <span class="nav-text">交易系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#智能合约"><span class="nav-number">3.2.</span> <span class="nav-text">智能合约</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#EVM"><span class="nav-number">3.2.1.</span> <span class="nav-text">EVM</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Smart-Contract-Vulnerabilities"><span class="nav-number">4.</span> <span class="nav-text">Smart Contract Vulnerabilities</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Critical-Instructions"><span class="nav-number">4.1.</span> <span class="nav-text">Critical Instructions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Direct-value-transfer"><span class="nav-number">4.1.1.</span> <span class="nav-text">Direct value transfer</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Code-injection"><span class="nav-number">4.1.2.</span> <span class="nav-text">Code injection</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Vulnerable-State"><span class="nav-number">4.1.3.</span> <span class="nav-text">Vulnerable State</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Storage"><span class="nav-number">4.2.</span> <span class="nav-text">Storage</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Automatic-Exploitation"><span class="nav-number">5.</span> <span class="nav-text">Automatic Exploitation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CFG-Recovery"><span class="nav-number">5.1.</span> <span class="nav-text">CFG Recovery</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -607,7 +629,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

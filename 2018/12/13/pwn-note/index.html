@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="EP&#39;s blog">
 <meta property="og:description" content="在CTF Wiki上pwn的部分学习笔记">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-19T01:45:05.776Z">
+<meta property="og:updated_time" content="2019-01-14T08:00:29.514Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="pwn学习笔记">
 <meta name="twitter:description" content="在CTF Wiki上pwn的部分学习笔记">
@@ -395,6 +395,7 @@
 <h2 id="二进制文件中的函数查找"><a href="#二进制文件中的函数查找" class="headerlink" title="二进制文件中的函数查找"></a>二进制文件中的函数查找</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">readelf -a libc-2.19.so | grep &quot;system&quot;</span><br></pre></td></tr></table></figure>
 <h2 id="二进制文件中的字符串查找"><a href="#二进制文件中的字符串查找" class="headerlink" title="二进制文件中的字符串查找"></a>二进制文件中的字符串查找</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">strings -a -t x libc-2.19.so | grep &quot;/bin/sh&quot;</span><br></pre></td></tr></table></figure>
 <h2 id="pwndbg工具在docker中的使用"><a href="#pwndbg工具在docker中的使用" class="headerlink" title="pwndbg工具在docker中的使用"></a>pwndbg工具在docker中的使用</h2><p>docker run -it \<br>—rm \<br>-h ${ctf_name} \<br>—name ${ctf_name} \<br>-v $(pwd)/${ctf_name}:/ctf/work \<br>-p 23946:23946 \<br>—cap-add=SYS_PTRACE \<br>skysider/pwndocker</p>
+<p>docker run -it \<br>—rm \<br>-h ${oyente} \<br>—name ${oyente} \<br>-v $(pwd)/${oyente}:/oyente/oyente \<br>-p 23946:23946 \<br>—cap-add=SYS_PTRACE \<br>luongnguyen/oyente</p>
 
       
     </div>
@@ -514,7 +515,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -525,7 +526,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -536,7 +537,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -611,7 +612,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
