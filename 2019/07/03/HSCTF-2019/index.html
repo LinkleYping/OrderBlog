@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Python,">
+  <meta name="keywords" content="CTF,WriteUp,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Python中常用的处理函数">
-<meta name="keywords" content="Python">
+<meta name="description" content="HSCTF 2019 WP">
+<meta name="keywords" content="CTF,WriteUp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python_notes">
-<meta property="og:url" content="https://LinkleYping.github.io/2019/05/01/python-notes/index.html">
+<meta property="og:title" content="HSCTF_2019">
+<meta property="og:url" content="https://LinkleYping.github.io/2019/07/03/HSCTF-2019/index.html">
 <meta property="og:site_name" content="EP&#39;s blog">
-<meta property="og:description" content="Python中常用的处理函数">
+<meta property="og:description" content="HSCTF 2019 WP">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-13T03:29:28.103Z">
+<meta property="og:updated_time" content="2019-07-03T15:02:18.939Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python_notes">
-<meta name="twitter:description" content="Python中常用的处理函数">
+<meta name="twitter:title" content="HSCTF_2019">
+<meta name="twitter:description" content="HSCTF 2019 WP">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://LinkleYping.github.io/2019/05/01/python-notes/">
+  <link rel="canonical" href="https://LinkleYping.github.io/2019/07/03/HSCTF-2019/">
 
 
 
 
 
-  <title>python_notes | EP's blog</title>
+  <title>HSCTF_2019 | EP's blog</title>
   
 
 
@@ -295,7 +295,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://LinkleYping.github.io/2019/05/01/python-notes/">
+    <link itemprop="mainEntityOfPage" href="https://LinkleYping.github.io/2019/07/03/HSCTF-2019/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="EP">
@@ -312,7 +312,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">python_notes</h1>
+          <h1 class="post-title" itemprop="name headline">HSCTF_2019</h1>
         
 
         <div class="post-meta">
@@ -324,8 +324,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-01T20:23:02+08:00">
-                2019-05-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-03T22:06:27+08:00">
+                2019-07-03
               </time>
             
 
@@ -347,8 +347,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">笔记</span>
+                  <a href="/categories/WriteUp/" itemprop="url" rel="index">
+                    <span itemprop="name">WriteUp</span>
                   </a>
                 </span>
 
@@ -371,7 +371,7 @@
 
           
               <div class="post-description">
-                  Python中常用的处理函数
+                  HSCTF 2019 WP
               </div>
           
 
@@ -388,12 +388,23 @@
       
 
       
-        <h2 id="ConfigParser"><a href="#ConfigParser" class="headerlink" title="ConfigParser"></a>ConfigParser</h2><p><a href="https://www.rddoc.com/doc/Python/3.6.0/zh/library/configparser/" target="_blank" rel="noopener">https://www.rddoc.com/doc/Python/3.6.0/zh/library/configparser/</a></p>
-<h2 id="Generator"><a href="#Generator" class="headerlink" title="Generator"></a>Generator</h2><p><a href="https://lotabout.me/2017/Python-Generator/" target="_blank" rel="noopener">https://lotabout.me/2017/Python-Generator/</a></p>
-<h2 id="enumerate"><a href="#enumerate" class="headerlink" title="enumerate()"></a>enumerate()</h2><p><a href="https://blog.csdn.net/churximi/article/details/51648388" target="_blank" rel="noopener">https://blog.csdn.net/churximi/article/details/51648388</a></p>
-<h2 id="format"><a href="#format" class="headerlink" title="format()"></a>format()</h2><p><a href="https://www.runoob.com/python/att-string-format.html" target="_blank" rel="noopener">https://www.runoob.com/python/att-string-format.html</a></p>
-<h2 id="collections模块defaultdict-和namedtuple"><a href="#collections模块defaultdict-和namedtuple" class="headerlink" title="collections模块defaultdict()和namedtuple()"></a>collections模块defaultdict()和namedtuple()</h2><p><a href="https://www.cnblogs.com/herbert/p/3468294.html" target="_blank" rel="noopener">https://www.cnblogs.com/herbert/p/3468294.html</a></p>
-<h2 id=""><a href="#" class="headerlink" title=" "></a> </h2>
+        <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>几个周之前做的题了，好久没写WP, 题目网站都关了，这几天想起开总结一下，做完题还是要立即写WP，要不然很浪费时间…</p>
+<h2 id="BiteCode"><a href="#BiteCode" class="headerlink" title="BiteCode"></a>BiteCode</h2><p>是一道Java的逆向题目，正常使用工具逆向不出来，应该是对文件进行了改动。<br>使用Krakatau进行反编译，要新建一个java/lang/System类，内容没有关系，但是要有，正常下载的Krakatau有些地方需要更改<br><code>python decompile.py -o temp -p BiteCode BiteCode</code><br>也可以直接使用 <a href="http://www.javadecompilers.com/" target="_blank" rel="noopener">http://www.javadecompilers.com/</a> 这个在线的工具<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a = [189074585, -227215135, 19240899, 245881291, 233391094, 56978353, -213838484, -231671677, -132473862, 143449065, 108102484, 71123188, 146096006, -173487738, -116507045, -68013365, 171414622, 94412444, 197453081, -50622153, 190140381, 77383944, -41590082, 61204303, -24637751, 61697107, 267894989, -13480562]</span><br><span class="line">b = [189074673, -227215214, 19240864, 245881279, 233390992, 56978378, -213838565, -231671605, -132473910, 143449053, 108102411, 71123073, 146096089, -173487628, -116507132, -68013319, 171414529, 94412524, 197453163, -50622201, 190140290, 77383996, -41590047, 61204283, -24637791, 61697122, 267895017, -13480461]</span><br><span class="line">flag = &apos;&apos;</span><br><span class="line">for i in range(len(a)):</span><br><span class="line">    flag = flag + chr(a[i] ^ b[i])</span><br><span class="line">print flag</span><br></pre></td></tr></table></figure></p>
+<h3 id="Flag"><a href="#Flag" class="headerlink" title="Flag"></a>Flag</h3><p>hsctf{wH04_u_r_2_pr0_4_th1$}</p>
+<h2 id="DaHeck"><a href="#DaHeck" class="headerlink" title="DaHeck"></a>DaHeck</h2><p>直接阅读源码逆算法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public class wp&#123;</span><br><span class="line">    public static void main(String []args)</span><br><span class="line">    &#123;</span><br><span class="line">        String s = new String(&quot;\uffc8\uffbd\uffce\uffbc\uffca\uffb7\uffc5\uffcb\u0005\uffc5\uffd5\uffc1\uffff\uffc1\uffd8\uffd1\uffc4\uffcb\u0010\uffd3\uffc4\u0001\uffbf\uffbf\uffd1\uffc0\uffc5\uffbb\uffd5\uffbe\u0003\uffca\uffff\uffda\uffc3\u0007\uffc2\u0001\uffd4\uffc0\u0004\uffbe\uffff\uffbe\uffc1\ufffd\uffb5&quot;);</span><br><span class="line">        char[] dst = s.toCharArray();</span><br><span class="line">        char[] heck = &quot;001002939948347799120432047441372907443274204020958757273&quot;.toCharArray();</span><br><span class="line">        char[] src = new char[dst.length];</span><br><span class="line">        for(int i=0; i&lt;dst.length; i++)</span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">            src[i] = (char)(heck[i] - dst[i]); </span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(src);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="Flag-1"><a href="#Flag-1" class="headerlink" title="Flag"></a>Flag</h3><p>hsctf{th4t_w4s_fun!_l3ts_try_s0m3_m0r3_r3v3rs3}</p>
+<h2 id="Forgot-Your-Password"><a href="#Forgot-Your-Password" class="headerlink" title="Forgot Your Password?"></a>Forgot Your Password?</h2><p>这道题需要推测数组s的值，已知第7，8次next()函数后得到的值是”hsctfissocoolwow“，使用z3求解器可以求解得到s的值。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> z3 <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">solver = Solver()</span><br><span class="line"></span><br><span class="line">flag1 = int((<span class="string">'ssiftcsh'</span>).encode(<span class="string">'hex'</span>), <span class="number">16</span>)</span><br><span class="line">flag2 = int((<span class="string">'wowlooco'</span>).encode(<span class="string">'hex'</span>), <span class="number">16</span>)</span><br><span class="line"></span><br><span class="line">s = [BitVec(<span class="string">'s%i'</span> % i, <span class="number">128</span>) <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">2</span>)]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">o</span><span class="params">(x,k)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> x&lt;&lt;k</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">m</span><span class="params">(a)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> a&amp;<span class="number">0xffffffffffffffff</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">next</span><span class="params">()</span>:</span></span><br><span class="line">	b = m(s[<span class="number">0</span>]+s[<span class="number">1</span>])</span><br><span class="line">	h()</span><br><span class="line">	<span class="keyword">return</span> m(b)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">p</span><span class="params">(k, x)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> x&gt;&gt;(<span class="number">64</span>-k)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">x</span><span class="params">(b, a)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> a^b</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">oro</span><span class="params">(a, b)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> a|b</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">h</span><span class="params">()</span>:</span></span><br><span class="line">	s1 = m(x(s[<span class="number">0</span>],s[<span class="number">1</span>]))</span><br><span class="line">	s[<span class="number">0</span>] = m(x(oro(o(s[<span class="number">0</span>],<span class="number">55</span>),p(<span class="number">55</span>,s[<span class="number">0</span>])),x(s1,(o(s1,<span class="number">14</span>)))))</span><br><span class="line">	s[<span class="number">1</span>] = m(oro(o(s1,<span class="number">36</span>),p(<span class="number">36</span>,s1)))</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">6</span>):</span><br><span class="line">    next()</span><br><span class="line">solver.add(next() == flag1)</span><br><span class="line">solver.add(next() == flag2)</span><br><span class="line"><span class="keyword">print</span> solver.check()</span><br><span class="line"><span class="keyword">print</span> solver.model()</span><br></pre></td></tr></table></figure></p>
+<p>求解得到s = [81081519719372872192, 16423178736247365899]<br>代入generator.py得到<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Thanks! Your numbers are: </span><br><span class="line">e06f76cd556604f0f21c34f1519d2fd2</span><br><span class="line">73c8535ab0f954b5ad1cbab7abc18309</span><br><span class="line">hsctfissocoolwow</span><br></pre></td></tr></table></figure></p>
+<h3 id="Flag-2"><a href="#Flag-2" class="headerlink" title="Flag"></a>Flag</h3><p>e06f76cd556604f0f21c34f1519d2fd2 73c8535ab0f954b5ad1cbab7abc18309</p>
+<h2 id="trig-is-really-hard"><a href="#trig-is-really-hard" class="headerlink" title="trig_is_really_hard"></a>trig_is_really_hard</h2><p>阅读源码直接对算法求逆<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">t = 0</span><br><span class="line">for i in range(2, 14):</span><br><span class="line">    t = t + i</span><br><span class="line">print(t)</span><br><span class="line">ans = [-25, 1, 10, 7, 4, 7, 2, 9, 3, 8, 1, 10,</span><br><span class="line">            3, -1, -8, 3, -6, 5, -4, 7, -5, 8, -3,</span><br><span class="line">            10, -1, 12, 10, 7, -6, 9, -4, 11, -2,</span><br><span class="line">            13, -2, -11, 6, -9, 8, -7, 10, -5, 12,</span><br><span class="line">            1, -12, 7, -10, 9, -8, 11, -6, 13, -4,</span><br><span class="line">            11, 6, -13, 8, -11, 10, -9, 12, -7, 14,</span><br><span class="line">            -5, 22, -16, 7, -14, 9, -12, 11, -10, 13,</span><br><span class="line">            -8, 15, -6, -2, 2, -21, 4, -19, 6, -17, 8,</span><br><span class="line">            -15, 10, -13, 12, -11, 5]</span><br><span class="line">print(len(ans))</span><br><span class="line">count = 0</span><br><span class="line">flag = &apos;&apos;</span><br><span class="line">for i in range(1, 13):</span><br><span class="line">    total = 0</span><br><span class="line">    for j in range(i+1):</span><br><span class="line">        total = total + ans[count + j] - i*pow(-1, i + ans[count+j])</span><br><span class="line">    count = count + i + 1</span><br><span class="line"></span><br><span class="line">    flag = flag + chr(int(total - (13 - i) * pow(-1, total + 13 - i) + 96))</span><br><span class="line">print(flag)</span><br></pre></td></tr></table></figure></p>
+<h3 id="Flag-3"><a href="#Flag-3" class="headerlink" title="Flag"></a>Flag</h3><p>hsctf{:hyperthonk:}</p>
+<h2 id="Tux-Talk-Show-2019"><a href="#Tux-Talk-Show-2019" class="headerlink" title="Tux Talk Show 2019"></a>Tux Talk Show 2019</h2><p>是一个猜数的问题，但是因为限制范围很小，所以可以直接使用循环猜同一个数的方式来爆破。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">from pwn import remote</span><br><span class="line"></span><br><span class="line">while True:</span><br><span class="line">    p =remote(&apos;rev.hsctf.com&apos;,6767)</span><br><span class="line">    p.recvuntil(&quot;Enter your lucky number: &quot;)</span><br><span class="line">    p.sendline(&apos;234874835&apos;)</span><br><span class="line">    try:</span><br><span class="line">        recv = p.recv()</span><br><span class="line">        print recv</span><br><span class="line">        break</span><br><span class="line">    except:</span><br><span class="line">        p.close()</span><br></pre></td></tr></table></figure></p>
+<p>看到一个WP可以根据使用相同的libc版本来直接得到这个数，感觉有点神奇，记录一下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">from pwn import *</span><br><span class="line">import ctypes</span><br><span class="line">LIBC = ctypes.cdll.LoadLibrary(&apos;/lib/x86_64-linux-gnu/libc-2.27.so&apos;)</span><br><span class="line">LIBC.srand(LIBC.time(0))</span><br><span class="line"></span><br><span class="line">sh = remote(&apos;rev.hsctf.com&apos;, 6767)</span><br><span class="line"></span><br><span class="line">number = sum([121, 1231231, 20312312, 122342342, 90988878, -30])</span><br><span class="line">for i in range(6):</span><br><span class="line">  number -= LIBC.rand() % 10 -1</span><br><span class="line"></span><br><span class="line">print number</span><br><span class="line">sh.interactive()</span><br></pre></td></tr></table></figure></p>
+<h2 id="Paint"><a href="#Paint" class="headerlink" title="Paint"></a>Paint</h2><p>直接异或可解，可以使用下面这个网站求解<br><a href="https://gchq.github.io/CyberChef/#recipe=From_Hex(&#39;Auto&#39;)XOR_Brute_Force(1,100,0,&#39;Standard&#39;,false,true,false,&#39;ftc&#39;)Reverse(&#39;Character&#39;)&amp;input=NDM1QjUyNTc1NjQ5NjE1RjYxNTA1NzYxNEQ0OTUxNUE1MDU3NDk2MTUwNUI1QjRENjE0QTUwNUI0ODVGNTY0NTU4NEE1RDRENTYzRQo" target="_blank" rel="noopener">https://gchq.github.io/CyberChef/#recipe=From_Hex(&#39;Auto&#39;)XOR_Brute_Force(1,100,0,&#39;Standard&#39;,false,true,false,&#39;ftc&#39;)Reverse(&#39;Character&#39;)&amp;input=NDM1QjUyNTc1NjQ5NjE1RjYxNTA1NzYxNEQ0OTUxNUE1MDU3NDk2MTUwNUI1QjRENjE0QTUwNUI0ODVGNTY0NTU4NEE1RDRENTYzRQo</a></p>
+<h3 id="Flag-4"><a href="#Flag-4" class="headerlink" title="Flag"></a>Flag</h3><p>hsctf{havent_seen_windows_in_a_while}</p>
+<h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">from pwn import *</span><br><span class="line">import string</span><br><span class="line">context.log_level=&apos;error&apos;</span><br><span class="line">char_set = string.letters+string.digits+&apos;_&apos;</span><br><span class="line">flag = &apos;hsctf&#123;&apos;</span><br><span class="line"></span><br><span class="line">real = &apos;4-EZF2M-7O5F4-V9P7O-EVFDP-E4VDO-O&apos;.replace(&apos;-&apos;,&apos;&apos;)</span><br><span class="line"></span><br><span class="line">l = len(flag)</span><br><span class="line"></span><br><span class="line">def check(real, out):</span><br><span class="line">  return out in real</span><br><span class="line"></span><br><span class="line">def try_input(flag):</span><br><span class="line">  sh = process(&apos;./license&apos;)</span><br><span class="line">  sh.sendlineafter(&apos;: &apos;, flag)</span><br><span class="line">  out = sh.recvall().strip().split(&apos;\n&apos;)[-1].replace(&apos;-&apos;,&apos;&apos;)</span><br><span class="line">  sh.close()</span><br><span class="line">  return check(real, out)</span><br><span class="line"></span><br><span class="line">while l &lt;= len(real):</span><br><span class="line">  for c in char_set:</span><br><span class="line">    if try_input(flag+c):</span><br><span class="line">      l += 1</span><br><span class="line">      flag += c</span><br><span class="line">      break</span><br><span class="line">  print flag</span><br></pre></td></tr></table></figure>
+<h3 id="Flag-5"><a href="#Flag-5" class="headerlink" title="Flag"></a>Flag</h3><p>hsctf{k3ith_m4k3s_tr4sh_r3}</p>
+
       
     </div>
     
@@ -410,7 +421,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
+            <a href="/tags/CTF/" rel="tag"><i class="fa fa-tag"></i> CTF</a>
+          
+            <a href="/tags/WriteUp/" rel="tag"><i class="fa fa-tag"></i> WriteUp</a>
           
         </div>
       
@@ -423,8 +436,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/01/re-sub/" rel="next" title="re_sub">
-                <i class="fa fa-chevron-left"></i> re_sub
+              <a href="/2019/06/04/ipfs/" rel="next" title="ipfs私有链的搭建">
+                <i class="fa fa-chevron-left"></i> ipfs私有链的搭建
               </a>
             
           </div>
@@ -432,10 +445,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/06/04/ipfs/" rel="prev" title="ipfs私有链的搭建">
-                ipfs私有链的搭建 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -589,7 +598,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ConfigParser"><span class="nav-number">1.</span> <span class="nav-text">ConfigParser</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Generator"><span class="nav-number">2.</span> <span class="nav-text">Generator</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#enumerate"><span class="nav-number">3.</span> <span class="nav-text">enumerate()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#format"><span class="nav-number">4.</span> <span class="nav-text">format()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#collections模块defaultdict-和namedtuple"><span class="nav-number">5.</span> <span class="nav-text">collections模块defaultdict()和namedtuple()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">6.</span> <span class="nav-text"> </span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BiteCode"><span class="nav-number">2.</span> <span class="nav-text">BiteCode</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Flag"><span class="nav-number">2.1.</span> <span class="nav-text">Flag</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DaHeck"><span class="nav-number">3.</span> <span class="nav-text">DaHeck</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Flag-1"><span class="nav-number">3.1.</span> <span class="nav-text">Flag</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Forgot-Your-Password"><span class="nav-number">4.</span> <span class="nav-text">Forgot Your Password?</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Flag-2"><span class="nav-number">4.1.</span> <span class="nav-text">Flag</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#trig-is-really-hard"><span class="nav-number">5.</span> <span class="nav-text">trig_is_really_hard</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Flag-3"><span class="nav-number">5.1.</span> <span class="nav-text">Flag</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tux-Talk-Show-2019"><span class="nav-number">6.</span> <span class="nav-text">Tux Talk Show 2019</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Paint"><span class="nav-number">7.</span> <span class="nav-text">Paint</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Flag-4"><span class="nav-number">7.1.</span> <span class="nav-text">Flag</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#License"><span class="nav-number">8.</span> <span class="nav-text">License</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Flag-5"><span class="nav-number">8.1.</span> <span class="nav-text">Flag</span></a></li></ol></li></ol></div>
             
 
           </div>
