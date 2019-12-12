@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="逆向,">
+  <meta name="keywords" content="笔记,IDA脚本,">
 
 
 
@@ -79,22 +79,18 @@
 
 
 
-<meta name="description" content="JarvisOJ stheasy writeup, IDA静态分析">
-<meta name="keywords" content="逆向">
+<meta name="description" content="IDAPython的一些基本函数，根据IDAPython手册整理">
+<meta name="keywords" content="笔记,IDA脚本">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JarvisOJ_stheasy">
-<meta property="og:url" content="https://LinkleYping.github.io/2018/12/17/jarvis-wp3/index.html">
+<meta property="og:title" content="IDAPython">
+<meta property="og:url" content="https://LinkleYping.github.io/2019/12/12/IDAPython/index.html">
 <meta property="og:site_name" content="EP&#39;s blog">
-<meta property="og:description" content="JarvisOJ stheasy writeup, IDA静态分析">
+<meta property="og:description" content="IDAPython的一些基本函数，根据IDAPython手册整理">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://linkleyping.github.io/2018/12/17/jarvis-wp3/sth_1.png">
-<meta property="og:image" content="https://linkleyping.github.io/2018/12/17/jarvis-wp3/sth_2.png">
-<meta property="og:image" content="https://linkleyping.github.io/2018/12/17/jarvis-wp3/sth_3.png">
-<meta property="og:updated_time" content="2018-12-19T02:21:15.743Z">
+<meta property="og:updated_time" content="2019-12-12T09:34:28.187Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JarvisOJ_stheasy">
-<meta name="twitter:description" content="JarvisOJ stheasy writeup, IDA静态分析">
-<meta name="twitter:image" content="https://linkleyping.github.io/2018/12/17/jarvis-wp3/sth_1.png">
+<meta name="twitter:title" content="IDAPython">
+<meta name="twitter:description" content="IDAPython的一些基本函数，根据IDAPython手册整理">
 
 
 
@@ -124,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://LinkleYping.github.io/2018/12/17/jarvis-wp3/">
+  <link rel="canonical" href="https://LinkleYping.github.io/2019/12/12/IDAPython/">
 
 
 
 
 
-  <title>JarvisOJ_stheasy | EP's blog</title>
+  <title>IDAPython | EP's blog</title>
   
 
 
@@ -299,7 +295,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://LinkleYping.github.io/2018/12/17/jarvis-wp3/">
+    <link itemprop="mainEntityOfPage" href="https://LinkleYping.github.io/2019/12/12/IDAPython/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="EP">
@@ -316,7 +312,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">JarvisOJ_stheasy</h1>
+          <h1 class="post-title" itemprop="name headline">IDAPython</h1>
         
 
         <div class="post-meta">
@@ -328,8 +324,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-17T17:37:04+08:00">
-                2018-12-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-12T13:04:29+08:00">
+                2019-12-12
               </time>
             
 
@@ -351,8 +347,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/writeup/" itemprop="url" rel="index">
-                    <span itemprop="name">writeup</span>
+                  <a href="/categories/笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
                   </a>
                 </span>
 
@@ -375,7 +371,7 @@
 
           
               <div class="post-description">
-                  JarvisOJ stheasy writeup, IDA静态分析
+                  IDAPython的一些基本函数，根据IDAPython手册整理
               </div>
           
 
@@ -392,11 +388,24 @@
       
 
       
-        <h2 id="使用file指令查看文件属性"><a href="#使用file指令查看文件属性" class="headerlink" title="使用file指令查看文件属性"></a>使用file指令查看文件属性</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$file ctf2</span><br><span class="line">ctf2: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), </span><br><span class="line">dynamically linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 2.6.18, </span><br><span class="line">BuildID[sha1]=ae99a50022c1d9d3bf96c045151d1edcdab9af94, stripped</span><br></pre></td></tr></table></figure>
-<h2 id="在linux下尝试运行"><a href="#在linux下尝试运行" class="headerlink" title="在linux下尝试运行"></a>在linux下尝试运行</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ./ctf2</span><br><span class="line">Input flag:jdijif</span><br><span class="line">Flag is wrong.</span><br></pre></td></tr></table></figure>
-<h2 id="在IDA32下打开"><a href="#在IDA32下打开" class="headerlink" title="在IDA32下打开"></a>在IDA32下打开</h2><p>main函数的伪代码:<br><img src="sth_1.png" alt="Alt text" title="main函数伪代码"><br>红色方框中是进行匹配的函数名称<br>sub_8048530()函数伪代码:<br><img src="sth_2.png" alt="Alt text" title="sub_8048530函数伪代码"><br>所求的flag与数组byte_8049B15和字符串byte_8049AE0有关，它们具体的值如下：<br><img src="sth_3.png" alt="Alt text" title="字符串与数组的值"><br>红色方框为字符串，蓝色方框为数组的值</p>
-<h2 id="可以根据下列代码解出flag"><a href="#可以根据下列代码解出flag" class="headerlink" title="可以根据下列代码解出flag"></a>可以根据下列代码解出flag</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">num = [<span class="number">0x48</span>, <span class="number">0x5D</span>, <span class="number">0x8D</span>, <span class="number">0x24</span>, <span class="number">0x84</span>, <span class="number">0x27</span>, <span class="number">0x99</span>, <span class="number">0x9F</span>, <span class="number">0x54</span>, <span class="number">0x18</span>, \</span><br><span class="line">    <span class="number">0x1E</span>, <span class="number">0x69</span>, <span class="number">0x7E</span>, <span class="number">0x33</span>, <span class="number">0x15</span>, <span class="number">0x72</span>, <span class="number">0x8D</span>, <span class="number">0x33</span>, <span class="number">0x24</span>, <span class="number">0x63</span>, <span class="number">0x21</span>, \</span><br><span class="line">    <span class="number">0x54</span>, <span class="number">0x0C</span>, <span class="number">0x78</span>, <span class="number">0x78</span>, <span class="number">0x78</span>, <span class="number">0x78</span>, <span class="number">0x78</span>, <span class="number">0x1B</span>, <span class="number">0x0</span>]</span><br><span class="line">s = <span class="string">'ak2j9Gh&#125;AgfY4ds-a6QW1#k5ER_T[cvLbV7nOm3ZeX&#123;CMt8SZo]U'</span></span><br><span class="line">f = <span class="string">''</span></span><br><span class="line"><span class="keyword">print</span> len(s)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">29</span>):</span><br><span class="line">    f = f + s[num[i] / <span class="number">3</span> - <span class="number">2</span>]</span><br><span class="line"><span class="keyword">print</span> f</span><br></pre></td></tr></table></figure>
-<p>运行出来flag的值为:<br>kctf{YoU_hAVe-GOt-fLg_233333}</p>
+        <h2 id="import"><a href="#import" class="headerlink" title="import"></a>import</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import idc</span><br><span class="line">import idaapi</span><br><span class="line">import idautils</span><br><span class="line">import ida_bytes</span><br></pre></td></tr></table></figure>
+<h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ea = idc.ScreenEA() <span class="comment">#获取当前所指的地址</span></span><br><span class="line">ea = here() <span class="comment">#与ScreenEA相同</span></span><br><span class="line"><span class="keyword">print</span> hex(MinEA()) <span class="comment">#获得idb中的最小地址,指的是整个可执行文件在内存中的最小地址</span></span><br><span class="line"><span class="keyword">print</span> hex(MaxEA()) <span class="comment">#获得最大地址</span></span><br><span class="line">idc.SegName(ea) <span class="comment">#ea所在段的名称</span></span><br><span class="line">idc.GetDisasm(ea) <span class="comment">#这一处的反汇编代码</span></span><br><span class="line">idc.GetMnem(ea) <span class="comment">#获得助记符或者指令名称</span></span><br><span class="line">idc.GetOpnd(ea, <span class="number">0</span>) <span class="comment">#获得第一个操作数</span></span><br><span class="line">idc.GetOpnd(ea, <span class="number">1</span>) <span class="comment">#获得第二个操作数</span></span><br></pre></td></tr></table></figure>
+<h2 id="Segments-段"><a href="#Segments-段" class="headerlink" title="Segments(段)"></a>Segments(段)</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> seg <span class="keyword">in</span> idautils.Segments():</span><br><span class="line">    <span class="keyword">print</span> idc.SegName(seg), idc.SegStart(seg), idc.SegEnd(seg) <span class="comment">#段名称，段起始地址</span></span><br><span class="line">idc.NextSeg(ea) <span class="comment">#获得ea的下一个段，返回下一个段的开始地址</span></span><br></pre></td></tr></table></figure>
+<h2 id="Functions-函数"><a href="#Functions-函数" class="headerlink" title="Functions(函数)"></a>Functions(函数)</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> func <span class="keyword">in</span> idautils.Functions(): <span class="comment">#返回已知的函数列表,也可以使用idautils.Functions(start_addr, end_addr)来指定开始地址和结束地址进行搜索</span></span><br><span class="line">    <span class="keyword">print</span> hex(func), idc.GetFunctionName(func) <span class="comment"># 每个函数的地址和名称</span></span><br><span class="line">idc.GetFunction(ea) <span class="comment"># ea可以是函数中的任何地址，不需要是开始地址</span></span><br><span class="line"><span class="comment"># 获取函数边界idaapi</span></span><br><span class="line">func = idaapi.get_func(ea)</span><br><span class="line">func.startEA <span class="comment"># 开始地址</span></span><br><span class="line">func.endEA <span class="comment"># 结束地址</span></span><br><span class="line"><span class="comment"># 获取函数边界idc</span></span><br><span class="line">ea = here()</span><br><span class="line">idc.NextFunction(ea) <span class="comment"># 下一个函数</span></span><br><span class="line">idc.PrevFunction(ea) <span class="comment"># 上一个函数</span></span><br><span class="line">start = idc.GetFunctionAttr(ea, FUNCATTR_START) <span class="comment"># 开始地址</span></span><br><span class="line">end = idc.GetFunctionAttr(ea, FUNCATTR_END) <span class="comment"># 结束地址</span></span><br><span class="line">curaddr = start</span><br><span class="line"><span class="keyword">while</span> curaddr &lt;= end:</span><br><span class="line">    <span class="keyword">print</span> hex(curaddr), idc.GetDisasm(curaddr)</span><br><span class="line">    curaddr = idc.NextHead(curaddr, end)</span><br></pre></td></tr></table></figure>
+<p>函数标志<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> func <span class="keyword">in</span> idautils.Functions():</span><br><span class="line">    flags = idc.GetFunctionFlags(func)</span><br><span class="line">    <span class="keyword">if</span> flags &amp; FUNC_NORET:</span><br><span class="line">        <span class="keyword">print</span> hex(func), <span class="string">"FUNC_NORET"</span></span><br><span class="line">    ...</span><br><span class="line"><span class="comment"># 一个函数可能有9个标志:</span></span><br><span class="line"><span class="comment"># FUNC_NORET, FUNC_FAR, FUNC_LIB, FUNC_STATIC,</span></span><br><span class="line"><span class="comment"># FUNC_FRAME, FUNC_USERFAR, FUNC_HIDDEN, FUNC_THUNK, FUNC_BOTTOMBP</span></span><br></pre></td></tr></table></figure></p>
+<p>FUNC_NORET: 没有返回(ret)等指令，值为1<br>FUNC_LIB: 用于查找库代码，值为4<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 打印所有库函数</span></span><br><span class="line"><span class="keyword">for</span> func <span class="keyword">in</span> idautils.Functions():</span><br><span class="line">    flags = idc.GetFunctionFlags(func)</span><br><span class="line">    <span class="keyword">if</span> flags &amp; FUNC_LIB:</span><br><span class="line">        <span class="keyword">print</span> hex(func), <span class="string">"FUNC_LIB"</span>, GetFunctionName(func)</span><br></pre></td></tr></table></figure></p>
+<p>FUNC_STATIC: 用于标识作为静态函数编译的函数<br>FUNC_THUNK: thunk函数，简单功能就是跳到另一个函数</p>
+<h2 id="Instructions-指令"><a href="#Instructions-指令" class="headerlink" title="Instructions(指令)"></a>Instructions(指令)</h2><p>如果我们有一个函数的地址, 我们能使用idautils.FuncItems(ea)获取列表中所有地址<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> func <span class="keyword">in</span> idautils.Functions():</span><br><span class="line">    flags = idc.GetFunctionFlags(func)</span><br><span class="line">    <span class="keyword">if</span> flags &amp; FUNC_LIB <span class="keyword">or</span> flags &amp; FUNC_THUNK:  <span class="comment"># 如果不是库函数或者简单的跳转函数</span></span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line">    dism_addr = list(idautils.FuncItems(func))</span><br><span class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> dism_addr:</span><br><span class="line">        m = idc.GetMnem(line)  <span class="comment"># 获取指令助记符</span></span><br><span class="line">        <span class="keyword">if</span> m == <span class="string">'call'</span> <span class="keyword">or</span> m == <span class="string">'jmp'</span>:</span><br><span class="line">            op = idc.GetOpType(line, <span class="number">0</span>)  <span class="comment"># 获取操作数类型</span></span><br><span class="line">            <span class="keyword">if</span> op == o_reg:  <span class="comment"># 操作数类型为寄存器</span></span><br><span class="line">                <span class="keyword">print</span> <span class="string">"0x%x %s"</span> % (line, idc.GetDisasm(line))</span><br></pre></td></tr></table></figure></p>
+<h2 id="Operands-操作数"><a href="#Operands-操作数" class="headerlink" title="Operands(操作数)"></a>Operands(操作数)</h2><p>使用idc.GetOpType(ea, n)获得第n个操作数的类型<br>o_void: 没有操作数<br>o_reg: 普通寄存器<br>o_mem: 直接内存引用<br>o_phrase: 操作数包含一个基本寄存器和一个索引寄存器<br>    eg: mov [edi+ecx], eax<br>o_displ: 操作数包含寄存器和一个位移值<br>    eg: mov eax, [edi+18h]<br>o_imm: 操作数为整数<br>    eg: add esp, 0Ch<br>o_far: 操作数的访问立即数远地址(没懂…)<br>o_near: 操作数的访问立即数近地址<br>另一种获得操作数类型的方法是使用idaapi<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">idaapi.decode_insn(curr_addr)</span><br><span class="line"><span class="keyword">if</span> idaapi.cmd.Op1.type == idaapi.o_displ: <span class="comment"># 第一个操作数</span></span><br><span class="line">    op = <span class="number">1</span></span><br><span class="line"><span class="keyword">if</span> idaapi.cmd.Op2.type == idaapi.o_displ: <span class="comment"># 第二个操作数</span></span><br><span class="line">    op = <span class="number">2</span></span><br><span class="line"><span class="keyword">if</span> op == <span class="keyword">None</span>:</span><br><span class="line">    <span class="keyword">continue</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="Xrefs-交叉引用"><a href="#Xrefs-交叉引用" class="headerlink" title="Xrefs(交叉引用)"></a>Xrefs(交叉引用)</h2><p>函数引用：找到所有引用WriteFile的地方<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wf_addr = idc.LocByName(<span class="string">"WriteFile"</span>)</span><br><span class="line"><span class="keyword">for</span> addr <span class="keyword">in</span> idautils.CodeRefsTo(wf_addr, <span class="number">0</span>):</span><br><span class="line">    <span class="keyword">print</span> hex(addr), idc.GetDIsasm(addr)</span><br></pre></td></tr></table></figure></p>
+<p>参数引用：找到所有引用字符串aCalculating的地方<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ea = idc.LocByName(<span class="string">'aCalculating'</span>)</span><br><span class="line"><span class="keyword">for</span> xref <span class="keyword">in</span> idautils.XrefsTo(ea, <span class="number">1</span>):</span><br><span class="line">    <span class="keyword">print</span> hex(xref.frm), idc.GetDisasm(xref.frm)</span><br></pre></td></tr></table></figure></p>
+<h2 id="Searching-搜索"><a href="#Searching-搜索" class="headerlink" title="Searching(搜索)"></a>Searching(搜索)</h2><p>为了搜索这些字节或者二进制搭配我们可以使用idc.FindBinary(ea, flag, searchstr, radix=16), ea是我们想要搜索的地址从标志字典或条件中。<br>不同类型的标志名称和值<br>SEARCH_UP = 0<br>SEARCH_DOWN = 1<br>SEARCH_NEXT = 2<br>SEARCH_CASE = 4<br>SEARCH_REGEX = 8<br>SEARCH_NOBRK = 16<br>SEARCH_NOSHOW = 32<br>SEARCH_UNICODE = 64 <strong><br>SEARCH_IDENT = 128 </strong><br>SEARCH_BRK = 256 **<br>SEARCH_UP和 SEARCH_DOWN被用来选择字典我们希望搜索到接下的<br>SEARCH_NEXT被用来获得下一个找到的对象<br>SEARCH_CASE被用于指定大小写敏感度<br>SEARCH_NOSHOW将不显示搜索过程<br>SEARCH_UNICODE被用来处理所有的Unicode字符串搜索<br>搜索字节<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">pattern = <span class="string">'55 8B EC'</span></span><br><span class="line">addr = MinEA()</span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">5</span>):</span><br><span class="line">    addr = idc.FindBinary(addr, SEARCH_DOWN, pattern);</span><br><span class="line">    <span class="keyword">if</span> addr != idc.BADADDR:</span><br><span class="line">        <span class="keyword">print</span> hex(addr), idc.GetDisasm(addr)</span><br></pre></td></tr></table></figure></p>
+<p>搜索字符串Accept<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">cur_addr = MinEA()</span><br><span class="line">end = MaxEA()</span><br><span class="line"><span class="keyword">while</span> cur_addr &lt; end:</span><br><span class="line">    cur_addr = idc.FindText(cur_addr, SEARCH_DOWN, <span class="number">0</span>, <span class="number">0</span>,<span class="string">"Accept"</span>)</span><br><span class="line">    <span class="keyword">if</span> cur_addr == idc.BADADDR:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">print</span> hex(cur_addr), idc.GetDisasm(cur_addr)</span><br><span class="line">    cur_addr = idc.NextHead(cur_addr)</span><br></pre></td></tr></table></figure></p>
+<p>idc.isCode(f)  标记为代码返回True<br>idc.isData(f) 数据<br>idc.FindCode(ea, flag) 找下一个被标记为代码的地址<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">addr = idc.FindCode(ea, SEARCH_DOWN|SEARCH_NEXT)</span><br><span class="line">print hex(addr), idc.GetDisasm(addr)</span><br></pre></td></tr></table></figure></p>
+<p>idc.FindData(ea, flag) 用法与FindCode相同</p>
+<h2 id="原始数据"><a href="#原始数据" class="headerlink" title="原始数据"></a>原始数据</h2><p>idc.Byte(ea) idc.Word(ea) idc.Dword(ea) idc.Qword(ea) idc.GetFloat(ea) idc.GetDouble(ea)<br>更灵活的：idc.GetManyBytes(ea, size)：返回值是char表示的字节而不是整数</p>
+<h2 id="Patching-打补丁"><a href="#Patching-打补丁" class="headerlink" title="Patching(打补丁)"></a>Patching(打补丁)</h2><p>idc.PatchByte(ea, value) idc.PatchWord(ea, value) idc.PatchDword(ea, value)</p>
+<h2 id="批量处理"><a href="#批量处理" class="headerlink" title="批量处理"></a>批量处理</h2><p>一次性对目录下所有文件进行反编译生成idb和asm文件<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> subprocess</span><br><span class="line"><span class="keyword">import</span> glob</span><br><span class="line">paths = glob.glob(<span class="string">"*"</span>)</span><br><span class="line">ida_path = os.path.join(os.environ[<span class="string">'PROGRAMFILES'</span>], <span class="string">"IDA"</span>, <span class="string">"idaw.exe"</span>)</span><br><span class="line"><span class="keyword">for</span> file_path <span class="keyword">in</span> paths:</span><br><span class="line">    <span class="keyword">if</span> file_path.endswith(<span class="string">".py"</span>):</span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line">    subprocess.call([ida_path, <span class="string">"-B"</span>, file_path])</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -414,7 +423,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/逆向/" rel="tag"><i class="fa fa-tag"></i> 逆向</a>
+            <a href="/tags/笔记/" rel="tag"><i class="fa fa-tag"></i> 笔记</a>
+          
+            <a href="/tags/IDA脚本/" rel="tag"><i class="fa fa-tag"></i> IDA脚本</a>
           
         </div>
       
@@ -427,8 +438,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/17/jarvis-wp2/" rel="next" title="JarvisOJ_FindKey">
-                <i class="fa fa-chevron-left"></i> JarvisOJ_FindKey
+              <a href="/2019/12/02/script2/" rel="next" title="常用算法(二)">
+                <i class="fa fa-chevron-left"></i> 常用算法(二)
               </a>
             
           </div>
@@ -436,10 +447,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/12/18/jarvis-wp4/" rel="prev" title="JarvisOJ_软件破解(1)">
-                JarvisOJ_软件破解(1) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -593,7 +600,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用file指令查看文件属性"><span class="nav-number">1.</span> <span class="nav-text">使用file指令查看文件属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在linux下尝试运行"><span class="nav-number">2.</span> <span class="nav-text">在linux下尝试运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在IDA32下打开"><span class="nav-number">3.</span> <span class="nav-text">在IDA32下打开</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可以根据下列代码解出flag"><span class="nav-number">4.</span> <span class="nav-text">可以根据下列代码解出flag</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#import"><span class="nav-number">1.</span> <span class="nav-text">import</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基础"><span class="nav-number">2.</span> <span class="nav-text">基础</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Segments-段"><span class="nav-number">3.</span> <span class="nav-text">Segments(段)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Functions-函数"><span class="nav-number">4.</span> <span class="nav-text">Functions(函数)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Instructions-指令"><span class="nav-number">5.</span> <span class="nav-text">Instructions(指令)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Operands-操作数"><span class="nav-number">6.</span> <span class="nav-text">Operands(操作数)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Xrefs-交叉引用"><span class="nav-number">7.</span> <span class="nav-text">Xrefs(交叉引用)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Searching-搜索"><span class="nav-number">8.</span> <span class="nav-text">Searching(搜索)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原始数据"><span class="nav-number">9.</span> <span class="nav-text">原始数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Patching-打补丁"><span class="nav-number">10.</span> <span class="nav-text">Patching(打补丁)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#批量处理"><span class="nav-number">11.</span> <span class="nav-text">批量处理</span></a></li></ol></div>
             
 
           </div>
