@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="CTF,WriteUp,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="USTC 2019 WP">
+<meta name="keywords" content="CTF,WriteUp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="USTC2019">
+<meta property="og:url" content="https://LinkleYping.github.io/2019/12/16/USTC2019/index.html">
+<meta property="og:site_name" content="EP&#39;s blog">
+<meta property="og:description" content="USTC 2019 WP">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-12-16T10:55:44.723Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="USTC2019">
+<meta name="twitter:description" content="USTC 2019 WP">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://LinkleYping.github.io/2019/12/16/USTC2019/">
+
+
+
+
+
+  <title>USTC2019 | EP's blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/LinkleYping"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">EP's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://LinkleYping.github.io/2019/12/16/USTC2019/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="EP">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="EP's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">USTC2019</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-16T18:53:13+08:00">
+                2019-12-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/WriteUp/" itemprop="url" rel="index">
+                    <span itemprop="name">WriteUp</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  USTC 2019 WP
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="USTC-CTF-2019"><a href="#USTC-CTF-2019" class="headerlink" title="USTC CTF 2019"></a>USTC CTF 2019</h2><p>看群里发了这个新生赛的宣传，抽空做了一下，有几个题好有趣呀，出题人应该有一颗有趣的灵魂哈哈哈哈。这个主要是一个记录，选择的基本上是我觉得有意思的题目，看别人的WP写了一份。希望日后做题能有用可以来参考。</p>
+<h2 id="宇宙终极问题"><a href="#宇宙终极问题" class="headerlink" title="宇宙终极问题"></a>宇宙终极问题</h2><p>有一个定理：每个整数都可以分解成4个数平方和的形式。(Lagrange’s four-square theorem)<br>四立方和分解： <a href="https://www.alpertron.com.ar/FCUBES.HTM" target="_blank" rel="noopener">https://www.alpertron.com.ar/FCUBES.HTM</a><br>四平方和分解： <a href="https://www.alpertron.com.ar/FSQUARES.HTM" target="_blank" rel="noopener">https://www.alpertron.com.ar/FSQUARES.HTM</a><br>在别人的WP上找到了一个代码版本求四平方和的脚本，这里记录一下。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> gmpy2</span><br><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> getPrime, getRandomInteger</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">TonelliShanks</span><span class="params">(p, a)</span>:</span>  <span class="comment"># TonelliShanks算法</span></span><br><span class="line">    <span class="keyword">if</span> pow(a, (p - <span class="number">1</span>) // <span class="number">2</span>, p) != <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line">    q = p - <span class="number">1</span></span><br><span class="line">    m = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> q % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">        q //= <span class="number">2</span></span><br><span class="line">        m += <span class="number">1</span></span><br><span class="line">    z = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> pow(z, (p - <span class="number">1</span>) // <span class="number">2</span>, p) != p - <span class="number">1</span>:</span><br><span class="line">        z = getRandomInteger(<span class="number">10</span>)</span><br><span class="line">    c = pow(z, q, p)</span><br><span class="line">    t = pow(a, q, p)</span><br><span class="line">    r = pow(a, (q + <span class="number">1</span>) // <span class="number">2</span>, p)</span><br><span class="line">    <span class="keyword">while</span> m &gt; <span class="number">1</span>:</span><br><span class="line">        tmp = pow(t, <span class="number">1</span> &lt;&lt; (m - <span class="number">2</span>), p)</span><br><span class="line">        <span class="keyword">if</span> tmp != <span class="number">1</span>:</span><br><span class="line">            r = r * c % p</span><br><span class="line">            t = t * (c * c % p) % p</span><br><span class="line">        c = c * c % p</span><br><span class="line">        m -= <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> r</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">find_small_m</span><span class="params">(x, y, p)</span>:</span></span><br><span class="line">    x2y2 = x * x + y * y</span><br><span class="line">    m = x2y2 // p</span><br><span class="line">    <span class="keyword">assert</span> <span class="number">0</span> == (x2y2 % p) <span class="keyword">and</span> <span class="number">0</span> == (x2y2 % m)</span><br><span class="line">    <span class="keyword">while</span> <span class="number">1</span> &lt; m:</span><br><span class="line">        u, v = x % m, y % m</span><br><span class="line">        <span class="keyword">if</span> u * <span class="number">2</span> &gt; m:</span><br><span class="line">            u -= m</span><br><span class="line">        <span class="keyword">if</span> v * <span class="number">2</span> &gt; m:</span><br><span class="line">            v -= m</span><br><span class="line">        u2v2 = u * u + v * v</span><br><span class="line">        mm = u2v2 // m</span><br><span class="line">        <span class="keyword">assert</span> <span class="number">0</span> == (u2v2 % m) <span class="keyword">and</span> <span class="number">0</span> &lt; mm &lt; m</span><br><span class="line">        </span><br><span class="line">        x, y = (u * x + v * y) // m, (u * y - v * x) // m</span><br><span class="line">        x2y2 = x * x + y * y</span><br><span class="line">        m = x2y2 // p</span><br><span class="line">        <span class="keyword">assert</span> <span class="number">0</span> == (x2y2 % p) <span class="keyword">and</span> <span class="number">0</span> == (x2y2 % m)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> x, y, m</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get2square</span><span class="params">(r)</span>:</span> <span class="comment"># 这里还可以求两个数的平方和</span></span><br><span class="line">    <span class="keyword">if</span> r == <span class="number">2</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>, <span class="number">1</span></span><br><span class="line">    <span class="keyword">assert</span> <span class="number">1</span> == r % <span class="number">4</span> <span class="keyword">and</span> gmpy2.is_prime(r)</span><br><span class="line">    x0 = TonelliShanks(r, r - <span class="number">1</span>)</span><br><span class="line">    <span class="keyword">assert</span> r - <span class="number">1</span> == pow(x0, <span class="number">2</span>, r)</span><br><span class="line">    k, l, m = find_small_m(x0, <span class="number">1</span>, r)</span><br><span class="line">    <span class="keyword">assert</span> k * k + l * l == m * r</span><br><span class="line">    <span class="keyword">assert</span> <span class="number">1</span> == m</span><br><span class="line">    <span class="keyword">return</span> k, l</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get4square</span><span class="params">(n)</span>:</span></span><br><span class="line">    print(<span class="string">"n ="</span>, n)</span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">        i = getRandomInteger(<span class="number">100</span>)</span><br><span class="line">        j = getRandomInteger(<span class="number">100</span>)</span><br><span class="line">        j ^= (i ^ j) &amp; <span class="number">0x1</span></span><br><span class="line">        r = n - i * i - j * j</span><br><span class="line">        <span class="keyword">if</span> <span class="number">1</span> == r % <span class="number">4</span> <span class="keyword">and</span> gmpy2.is_prime(r):</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    print(<span class="string">"r ="</span>, r)</span><br><span class="line"></span><br><span class="line">    k, l = get2square(r)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">assert</span> i * i + j * j + k * k + l * l == n</span><br><span class="line">    print(<span class="string">"i ="</span>, i)</span><br><span class="line">    print(<span class="string">"j ="</span>, j)</span><br><span class="line">    print(<span class="string">"k ="</span>, k)</span><br><span class="line">    print(<span class="string">"l ="</span>, l)</span><br><span class="line">    <span class="keyword">return</span> i, j, k, l</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    n = getPrime(<span class="number">256</span>) * getPrime(<span class="number">256</span>)</span><br><span class="line">    print(get4square(n))</span><br></pre></td></tr></table></figure></p>
+<p>还有一问是随机数的平方和分解问题。将一个随机数分解成两个素数的平方和。<br>定理：整数n能分解为两个整数的平方和的充要条件是，n的质因数分解不存在(4k+3)型质数的奇数次方。<br>这里n的分解得到的质数都是4k+1的形式。<br>定理： <a href="https://en.wikipedia.org/wiki/Brahmagupta%E2%80%93Fibonacci_identity" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Brahmagupta%E2%80%93Fibonacci_identity</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get2square_list</span><span class="params">(n, primes)</span>:</span></span><br><span class="line">    <span class="keyword">assert</span> list == type(primes)</span><br><span class="line">    check_product = <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> p <span class="keyword">in</span> primes:</span><br><span class="line">        <span class="keyword">assert</span> <span class="number">2</span> == p <span class="keyword">or</span> (<span class="number">1</span> == p % <span class="number">4</span> <span class="keyword">and</span> gmpy2.is_prime(p))</span><br><span class="line">        check_product *= p</span><br><span class="line">    <span class="keyword">assert</span> check_product == n</span><br><span class="line">    u, v = <span class="number">1</span>, <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> p <span class="keyword">in</span> primes:</span><br><span class="line">        x, y = get2square(p)</span><br><span class="line">        u, v = u * x + v * y, u * y - v * x</span><br><span class="line">    <span class="keyword">assert</span> u * u + v * v == n</span><br><span class="line">    <span class="keyword">return</span> u, v</span><br></pre></td></tr></table></figure>
+<h2 id="Happy-LUG"><a href="#Happy-LUG" class="headerlink" title="Happy LUG"></a>Happy LUG</h2><p>基础太差了，考点是DNS。<br>题目说这个域名无法通过浏览器访问，也就是这个域名没有指向任何 IP 地址。实际上一个域名除了可以指向一个或多个 IP 地址（A 或 AAAA 记录）之外还可以包含其他信息，例如指向另一个域名（CNAME 记录），指示接收邮件的服务器（MX 记录），或者提供任意字符串（TXT 记录）。最后一个就是这道题的第二个知识点，域名 xn—g28h.hack.ustclug.org. 有一个 TXT 记录，其中就是 flag。查询 DNS 记录有很多种方式，例如网上搜一个查询服务或者使用 nslookup 等命令行工具，总之查出这个 TXT 记录就对了。<br>用DNS查询TXT记录的方法是：nslookup -q=TXT yourdomain.com<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">λ nslookup -q=TXT xn--g28h.hack.ustclug.org</span><br><span class="line">服务器:  UnKnown</span><br><span class="line">Address:  10.3.9.5</span><br><span class="line"></span><br><span class="line">非权威应答:</span><br><span class="line">xn--g28h.hack.ustclug.org       text =</span><br><span class="line"></span><br><span class="line">        &quot;flag&#123;DN5_C4N_H4VE_em0ji_haha&#125;&quot;</span><br></pre></td></tr></table></figure></p>
+<h2 id="正则验证器"><a href="#正则验证器" class="headerlink" title="正则验证器"></a>正则验证器</h2><p>这里用了ReDos这个知识点，是我见过的知识点…是我太菜了hhh<br><a href="https://en.wikipedia.org/wiki/ReDoS" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/ReDoS</a><br><a href="https://www.anquanke.com/post/id/177100" target="_blank" rel="noopener">https://www.anquanke.com/post/id/177100</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Regex: (a*)*$</span><br><span class="line">String: aaaaaaaaaaaaaaaaaaaaaaab</span><br></pre></td></tr></table></figure></p>
+<p>上面这个正则由于失败时回溯的存在，每增加一个 a 就会使匹配时间翻一倍</p>
+<h2 id="驴啃计算器"><a href="#驴啃计算器" class="headerlink" title="驴啃计算器"></a>驴啃计算器</h2><p>是一道数学题，知识点是：给定实数x，一步操作可选择将其变为sin(x),cos(x),tan(x),arcsin(x),arccos(x),arctan(x)，初始时x=0，求证对于任意的正有理数q，可经过有限次操作后使x=q。<br><a href="http://blog.sina.com.cn/s/blog_a661ecd501012xsr.html" target="_blank" rel="noopener">http://blog.sina.com.cn/s/blog_a661ecd501012xsr.html</a><br><a href="https://nbviewer.jupyter.org/github/ustclug/hackergame2019-writeups/blob/master/official/%E9%A9%B4%E5%95%83%E8%AE%A1%E7%AE%97%E5%99%A8/calc.ipynb" target="_blank" rel="noopener">https://nbviewer.jupyter.org/github/ustclug/hackergame2019-writeups/blob/master/official/%E9%A9%B4%E5%95%83%E8%AE%A1%E7%AE%97%E5%99%A8/calc.ipynb</a><br>(tips: <a href="https://nbviewer.jupyter.org/" target="_blank" rel="noopener">https://nbviewer.jupyter.org/</a> 可以打开任意的在线ipynb文档)<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> __future__ <span class="keyword">import</span> division</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> numpy <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> fractions <span class="keyword">import</span> Fraction</span><br><span class="line"></span><br><span class="line">calcList = []</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">genFraction</span><span class="params">(num,n=<span class="number">20</span>)</span>:</span></span><br><span class="line">    f = Fraction(num)</span><br><span class="line">    a = f.numerator</span><br><span class="line">    b = f.denominator</span><br><span class="line">    a = a*a</span><br><span class="line">    b = b*b</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">        result = a//b</span><br><span class="line">        a = a - result*b</span><br><span class="line">        <span class="comment">#print a,b</span></span><br><span class="line">        a,b = b,a</span><br><span class="line">        <span class="comment">#print a,b</span></span><br><span class="line">        <span class="string">'''</span></span><br><span class="line"><span class="string">        if result == 1:</span></span><br><span class="line"><span class="string">            break</span></span><br><span class="line"><span class="string">        '''</span></span><br><span class="line">        <span class="comment">#if result &gt; 5000:</span></span><br><span class="line">        <span class="comment">#    break</span></span><br><span class="line">        <span class="keyword">yield</span> result</span><br><span class="line">        <span class="keyword">if</span> b == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="keyword">global</span> calcList</span><br><span class="line">    calcList += [<span class="string">"atan"</span>,<span class="string">"sin"</span>,<span class="string">"acos"</span>,<span class="string">"tan"</span>]</span><br><span class="line">    <span class="keyword">return</span> tan(arccos(sin(arctan(x))))</span><br><span class="line">    </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">g</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="keyword">global</span> calcList</span><br><span class="line">    calcList += [<span class="string">"atan"</span>,<span class="string">"cos"</span>]</span><br><span class="line">    <span class="keyword">return</span> f(cos(arctan(x)))</span><br><span class="line">    </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test</span><span class="params">(aim)</span>:</span></span><br><span class="line">    <span class="keyword">global</span> calcList</span><br><span class="line">    <span class="comment">#aim = log(aim)</span></span><br><span class="line">    <span class="comment">#aim = 42.79781263758425 #tan(72.35711075569202)</span></span><br><span class="line">    aim = deg2rad(aim)</span><br><span class="line">    x = <span class="number">0</span></span><br><span class="line">    fList = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> genFraction(aim):</span><br><span class="line">        fList.append(i)</span><br><span class="line">    <span class="keyword">print</span> fList</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(fList)):</span><br><span class="line">        a = fList.pop()</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(a):</span><br><span class="line">            x = g(x)</span><br><span class="line">        calcList += [<span class="string">"1/x"</span>]</span><br><span class="line">        x = <span class="number">1</span>/x</span><br><span class="line">    calcList += [<span class="string">"1/x"</span>]</span><br><span class="line">    x = <span class="number">1</span>/x</span><br><span class="line">    calcList += [<span class="string">"R2D"</span>]</span><br><span class="line">    <span class="keyword">print</span> <span class="string">"aim = %f"</span> % rad2deg(aim)</span><br><span class="line">    <span class="keyword">print</span> <span class="string">"x = %f"</span> % (rad2deg(x))</span><br><span class="line">    <span class="comment">#print "p = %f" % ((x*x))</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">","</span>.join(calcList)</span><br><span class="line">    </span><br><span class="line">  </span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">host = <span class="string">"http://202.38.93.241:10024"</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solve</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">'sin,cos,x^2'</span> <span class="keyword">or</span> <span class="string">'magic'</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test2</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">with</span> requests.session() <span class="keyword">as</span> sess:</span><br><span class="line">        r = sess.get(host + <span class="string">'/challenges'</span>)</span><br><span class="line">        X = json.loads(r.text)[<span class="string">"msg"</span>]</span><br><span class="line">        print(X)</span><br><span class="line">        data = &#123;</span><br><span class="line">            <span class="string">"a1"</span>: test(X[<span class="number">0</span>]),</span><br><span class="line">            <span class="string">"a2"</span>: test(X[<span class="number">1</span>]),</span><br><span class="line">            <span class="string">"a3"</span>: test(X[<span class="number">2</span>])</span><br><span class="line">        &#125;</span><br><span class="line">        r = sess.post(host + <span class="string">"/submit"</span>, data=data)</span><br><span class="line">        resp = json.loads(r.text)</span><br><span class="line">        print(resp[<span class="string">"msg"</span>])  </span><br><span class="line">    </span><br><span class="line">test2()</span><br></pre></td></tr></table></figure></p>
+<h2 id="天书残篇"><a href="#天书残篇" class="headerlink" title="天书残篇"></a>天书残篇</h2><p>是道简单的逆向题，用了Witespace这个语言。在线反汇编器：<a href="https://vii5ard.github.io/whitespace/" target="_blank" rel="noopener">https://vii5ard.github.io/whitespace/</a><br>这里有各种奇奇怪怪的语言：<a href="https://juejin.im/post/5b02745b6fb9a07aa5429a76" target="_blank" rel="noopener">https://juejin.im/post/5b02745b6fb9a07aa5429a76</a><br>顺便有WP提了一下Ook： <a href="https://www.cnblogs.com/WangAoBo/p/6373318.html" target="_blank" rel="noopener">https://www.cnblogs.com/WangAoBo/p/6373318.html</a><br>在线解密：<a href="https://www.splitbrain.org/services/ook" target="_blank" rel="noopener">https://www.splitbrain.org/services/ook</a></p>
+<h2 id="我想要个家"><a href="#我想要个家" class="headerlink" title="我想要个家"></a>我想要个家</h2><p>是我卡住的题…<br>chroot…</p>
+<p>我没想过用RE的方式解来着—idagolang-helper还原符号，然后用patch的方法。试一下。</p>
+<h2 id="十次方根"><a href="#十次方根" class="headerlink" title="十次方根"></a>十次方根</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x = 130095999494467643631574289251374479743427759332282644620931023932981730612064829262332840253969261363881910701276769455728130421459878658660627330362688856751252524519341435317968272275310598639991033512763704530123231772642623291899534454658707761230166809620539187116816778418242273580873637781313957589597</span><br><span class="line">y = 116513882455567447431772208851676203256471727099349255694179213039239989833646726805040167642952589899809273716764673737423792812107737304956679717082391151505476360762847773608327055926832394948293052633869637754201186227370594688119795413400655007893009882742908697688490841023621108562593724732469462968731</span><br><span class="line">z = 88688615046438957657148589794574470139777919686383514327296565433247300792803913489977671293854830459385807133302995575774658605472491904258624914486448276269854207404533062581134557448023142028865220726281791025833570337140263511960407206818858439353134327592503945131371190285416230131136007578355799517986306208039490339159501009668785839201465041101739825050371023956782364610889969860432267781626941824596468923354157981771773589236462813563647577651117020694251283103175874783965004467136515096081442018965974870665038880840823708377340101510978112755669470752689525778937276250835072011344062132449232775717960070624563850487919381138228636278647776184490240264110748648486121139328569423969642059474027527737521891542567351630545570488901368570734520954996585774666946913854038917494322793749823245652065062604226133920469926888309742466030087045251385865707151307850662127591419171619721200858496299127088429333831383287417361021420824398501423875648199373623572614151830871182111045650469239575676312393555191890749537174702485617397506191658938798937462708198240714491454507874141432982611857838173469612147092460359775924447976521509874765598726655964369735759375793871985156532139719500175158914354647101621378769238233</span><br><span class="line">n ** 10 % (x * y * y * y) == z</span><br><span class="line">求n</span><br></pre></td></tr></table></figure>
+<p>可以类似与RSA，但是p=x,q=y^3,e=10<br>phi = (x-1)<em>(y-1)</em>y*y<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python3</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> easy_math <span class="keyword">import</span> x <span class="keyword">as</span> p, y <span class="keyword">as</span> q, z <span class="keyword">as</span> c</span><br><span class="line"><span class="keyword">from</span> sympy.ntheory.residue_ntheory <span class="keyword">import</span> sqrt_mod</span><br><span class="line"><span class="keyword">import</span> sympy.ntheory.residue_ntheory</span><br><span class="line"><span class="keyword">import</span> gmpy2</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">factor_</span><span class="params">(nn, *args, **kwargs)</span>:</span></span><br><span class="line">    t = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> nn % p == <span class="number">0</span>:</span><br><span class="line">        t += <span class="number">1</span></span><br><span class="line">        nn //= p</span><br><span class="line">    s = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> nn % q == <span class="number">0</span>:</span><br><span class="line">        s += <span class="number">1</span></span><br><span class="line">        nn //= q</span><br><span class="line">    <span class="keyword">if</span> nn != <span class="number">1</span>:</span><br><span class="line">        print(nn)</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">None</span></span><br><span class="line">    <span class="keyword">return</span> &#123;p: t, q: s&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sympy.ntheory.residue_ntheory.factorint = factor_</span><br><span class="line"></span><br><span class="line">n = p * q ** <span class="number">3</span></span><br><span class="line">phi = (p - <span class="number">1</span>) * (q ** <span class="number">2</span>) * (q - <span class="number">1</span>)</span><br><span class="line">root_5th_of_c = pow(c, gmpy2.invert(<span class="number">5</span>, phi // <span class="number">5</span>), n)</span><br><span class="line">root_5th_of_1_all = set(pow(i, (phi // <span class="number">5</span>), n) <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">20</span>))</span><br><span class="line">root_5th_of_1_all = set(r <span class="keyword">for</span> r <span class="keyword">in</span> set(root_5th_of_1_all) <span class="keyword">if</span> pow(r, <span class="number">5</span>, n) == <span class="number">1</span>)</span><br><span class="line">root_5th_of_c_all = [root_5th_of_c * r % n <span class="keyword">for</span> r <span class="keyword">in</span> root_5th_of_1_all]</span><br><span class="line">m_all = [m <span class="keyword">for</span> r <span class="keyword">in</span> root_5th_of_c_all <span class="keyword">for</span> m <span class="keyword">in</span> sqrt_mod(r, n, <span class="keyword">True</span>)]</span><br><span class="line">print(len(m_all))</span><br><span class="line"><span class="keyword">for</span> m <span class="keyword">in</span> m_all:</span><br><span class="line">    h = hex(m)[<span class="number">2</span>:]</span><br><span class="line">    <span class="keyword">if</span> len(h) % <span class="number">2</span> == <span class="number">0</span> <span class="keyword">and</span> bytes.fromhex(hex(m)[<span class="number">2</span>:]).startswith(<span class="string">b"flag"</span>):</span><br><span class="line">        print(bytes.fromhex(hex(m)[<span class="number">2</span>:]).decode()[:<span class="number">32</span>])</span><br></pre></td></tr></table></figure></p>
+<h2 id="大整数分解锦标赛"><a href="#大整数分解锦标赛" class="headerlink" title="大整数分解锦标赛"></a>大整数分解锦标赛</h2><p>随机数预测问题，用反复 Help 得到的随机数来重构 MT19937 的内部状态<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python3</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">UncertainBit</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, value)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> value == <span class="number">0</span> <span class="keyword">or</span> value == <span class="number">1</span> <span class="keyword">or</span> value == <span class="keyword">None</span>:</span><br><span class="line">            self.value = value</span><br><span class="line">        <span class="keyword">elif</span> value == <span class="string">"0"</span> <span class="keyword">or</span> value == <span class="string">"1"</span>:</span><br><span class="line">            self.value = int(value)</span><br><span class="line">        <span class="keyword">elif</span> value == <span class="string">"X"</span>:</span><br><span class="line">            self.value = <span class="keyword">None</span></span><br><span class="line">        <span class="keyword">elif</span> isinstance(value, UncertainBit):</span><br><span class="line">            self.value = value.value</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">raise</span> TypeError()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__and__</span><span class="params">(self, other)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> self.value != <span class="keyword">None</span> <span class="keyword">and</span> other.value != <span class="keyword">None</span>:</span><br><span class="line">            <span class="keyword">return</span> UncertainBit(self.value &amp; other.value)</span><br><span class="line">        <span class="keyword">if</span> self.value == <span class="number">0</span> <span class="keyword">or</span> other.value == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> UncertainBit(<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> UncertainBit(<span class="keyword">None</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__or__</span><span class="params">(self, other)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> self.value != <span class="keyword">None</span> <span class="keyword">and</span> other.value != <span class="keyword">None</span>:</span><br><span class="line">            <span class="keyword">return</span> UncertainBit(self.value | other.value)</span><br><span class="line">        <span class="keyword">if</span> self.value == <span class="number">1</span> <span class="keyword">or</span> other.value == <span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span> UncertainBit(<span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> UncertainBit(<span class="keyword">None</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__xor__</span><span class="params">(self, other)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> self.value != <span class="keyword">None</span> <span class="keyword">and</span> other.value != <span class="keyword">None</span>:</span><br><span class="line">            <span class="keyword">return</span> UncertainBit(self.value ^ other.value)</span><br><span class="line">        <span class="keyword">return</span> UncertainBit(<span class="keyword">None</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__invert__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> self.value <span class="keyword">is</span> <span class="keyword">None</span>:</span><br><span class="line">            <span class="keyword">return</span> UncertainBit(<span class="keyword">None</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> UncertainBit(<span class="number">1</span> - self.value)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__repr__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> self.value <span class="keyword">is</span> <span class="keyword">None</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">"X"</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> str(self.value)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">combine</span><span class="params">(self, other)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> self.value != <span class="keyword">None</span> <span class="keyword">and</span> other.value != <span class="keyword">None</span>:</span><br><span class="line">            <span class="keyword">if</span> self.value != other.value:</span><br><span class="line">                <span class="keyword">raise</span> ValueError()</span><br><span class="line">        <span class="keyword">if</span> self.value != <span class="keyword">None</span>:</span><br><span class="line">            <span class="keyword">return</span> UncertainBit(self.value)</span><br><span class="line">        <span class="keyword">return</span> UncertainBit(other.value)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">repeat</span><span class="params">(self, n)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> UncertainBitVector(n, [self <span class="keyword">for</span> _ <span class="keyword">in</span> range(n)])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">UncertainBitVector</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, bits, value=None)</span>:</span></span><br><span class="line">        self.bits = bits</span><br><span class="line">        self.vec = [UncertainBit(<span class="number">0</span>) <span class="keyword">for</span> _ <span class="keyword">in</span> range(len(self))]</span><br><span class="line">        <span class="keyword">if</span> value <span class="keyword">is</span> <span class="keyword">None</span>:</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(len(self)):</span><br><span class="line">                self[i] = <span class="keyword">None</span></span><br><span class="line">        <span class="keyword">elif</span> isinstance(value, int):</span><br><span class="line">            <span class="keyword">if</span> value.bit_length() &gt; len(self):</span><br><span class="line">                <span class="keyword">raise</span> ValueError()</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(value.bit_length()):</span><br><span class="line">                self[i] = (value &gt;&gt; i) &amp; <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">if</span> len(value) &gt; len(self):</span><br><span class="line">                <span class="keyword">raise</span> ValueError()</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(len(value)):</span><br><span class="line">                self[i] = value[i]</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__len__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.bits</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__getitem__</span><span class="params">(self, key)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> isinstance(key, int):</span><br><span class="line">            <span class="keyword">if</span> key &gt;= len(self):</span><br><span class="line">                <span class="keyword">return</span> UncertainBit(<span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> self.vec[key]</span><br><span class="line">        <span class="keyword">elif</span> isinstance(key, slice):</span><br><span class="line">            bv = self.vec[key]</span><br><span class="line">            <span class="keyword">return</span> UncertainBitVector(len(bv), bv)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">raise</span> TypeError()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__setitem__</span><span class="params">(self, key, value)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> isinstance(key, int):</span><br><span class="line">            self.vec[key] = UncertainBit(value)</span><br><span class="line">        <span class="keyword">elif</span> isinstance(key, slice):</span><br><span class="line">            <span class="keyword">raise</span> NotImplementedError()</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">raise</span> TypeError()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__and__</span><span class="params">(self, other)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> isinstance(other, int):</span><br><span class="line">            other = UncertainBitVector(other.bit_length(), other)</span><br><span class="line">        bits = min(len(self), len(other))</span><br><span class="line">        <span class="keyword">return</span> UncertainBitVector(bits, [self[i] &amp; other[i] <span class="keyword">for</span> i <span class="keyword">in</span> range(bits)])</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__rand__</span><span class="params">(self, other)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self &amp; other</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__or__</span><span class="params">(self, other)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> isinstance(other, int):</span><br><span class="line">            other = UncertainBitVector(other.bit_length(), other)</span><br><span class="line">        bits = max(len(self), len(other))</span><br><span class="line">        <span class="keyword">return</span> UncertainBitVector(bits, [self[i] | other[i] <span class="keyword">for</span> i <span class="keyword">in</span> range(bits)])</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__ror__</span><span class="params">(self, other)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self &amp; other</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__xor__</span><span class="params">(self, other)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> isinstance(other, int):</span><br><span class="line">            other = UncertainBitVector(other.bit_length(), other)</span><br><span class="line">        bits = max(len(self), len(other))</span><br><span class="line">        <span class="keyword">return</span> UncertainBitVector(bits, [self[i] ^ other[i] <span class="keyword">for</span> i <span class="keyword">in</span> range(bits)])</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__rxor__</span><span class="params">(self, other)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self &amp; other</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__lshift__</span><span class="params">(self, other)</span>:</span></span><br><span class="line">        bits = len(self) + other</span><br><span class="line">        <span class="keyword">return</span> UncertainBitVector(bits, [<span class="number">0</span>] * other + self.vec)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__rshift__</span><span class="params">(self, other)</span>:</span></span><br><span class="line">        bits = max(len(self) - other, <span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> UncertainBitVector(bits, self.vec[other:])</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__sub__</span><span class="params">(self, other)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> isinstance(other, int):</span><br><span class="line">            other = UncertainBitVector(other.bit_length(), other)</span><br><span class="line">        r = []</span><br><span class="line">        carry = UncertainBit(<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(self)):</span><br><span class="line">            r.append(self[i] ^ other[i] ^ carry)</span><br><span class="line">            carry = ~((self[i] &amp; ~other[i]) | (self[i] &amp; ~carry) | (~other[i] &amp; ~carry))</span><br><span class="line">        <span class="keyword">if</span> carry.value != <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">raise</span> OverflowError()</span><br><span class="line">        <span class="keyword">return</span> UncertainBitVector(len(self), r)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__repr__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">""</span>.join([str(b) <span class="keyword">for</span> b <span class="keyword">in</span> reversed(self.vec)])</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">sign_ext</span><span class="params">(self, bits)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> bits &lt; len(self):</span><br><span class="line">            <span class="keyword">raise</span> ValueError()</span><br><span class="line">        <span class="keyword">return</span> UncertainBitVector(bits, self.vec + [self[<span class="number">-1</span>]] * (bits - len(self)))</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">combine</span><span class="params">(self, other)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> len(self) != len(other):</span><br><span class="line">            <span class="keyword">raise</span> ValueError()</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> UncertainBitVector(</span><br><span class="line">                len(self), [self[i].combine(other[i]) <span class="keyword">for</span> i <span class="keyword">in</span> range(len(self))]</span><br><span class="line">            )</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">all_known</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> all(self[i].value <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">None</span> <span class="keyword">for</span> i <span class="keyword">in</span> range(len(self)))</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">int_value</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> self.all_known():</span><br><span class="line">            <span class="keyword">raise</span> ValueError()</span><br><span class="line">        v = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(self)):</span><br><span class="line">            v |= self[i].value &lt;&lt; i</span><br><span class="line">        <span class="keyword">return</span> v</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MTSolver</span>:</span></span><br><span class="line">    N = <span class="number">624</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.length = self.N * <span class="number">6</span></span><br><span class="line">        self.mt = [UncertainBitVector(<span class="number">32</span>) <span class="keyword">for</span> _ <span class="keyword">in</span> range(self.length)]</span><br><span class="line">        self.pos = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">known_raw</span><span class="params">(self, pos, value)</span>:</span></span><br><span class="line">        self.mt[pos] = self.mt[pos].combine(value)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">known_32bit</span><span class="params">(self, value)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> len(value) != <span class="number">32</span>:</span><br><span class="line">            <span class="keyword">raise</span> ValueError()</span><br><span class="line">        self.known_raw(self.pos, self.untempering(value))</span><br><span class="line">        self.pos += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">known_prime</span><span class="params">(self, begin, end, p)</span>:</span></span><br><span class="line">        self.known_range(begin - <span class="number">1</span>, end + <span class="number">1</span>, self.prime_to_bv(p))</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">known_range</span><span class="params">(self, begin, end, n)</span>:</span></span><br><span class="line">        bits = (end - begin).bit_length()</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            rnd = UncertainBitVector(bits, n - begin)</span><br><span class="line">        <span class="keyword">except</span> OverflowError:</span><br><span class="line">            rnd = UncertainBit(<span class="string">"X"</span>).repeat(bits)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(bits // <span class="number">32</span>):</span><br><span class="line">            self.known_32bit(rnd[i * <span class="number">32</span> : i * <span class="number">32</span> + <span class="number">32</span>])</span><br><span class="line">        extra = bits % <span class="number">32</span></span><br><span class="line">        <span class="keyword">if</span> extra:</span><br><span class="line">            bv = UncertainBitVector(</span><br><span class="line">                <span class="number">32</span>,</span><br><span class="line">                (rnd[bits // <span class="number">32</span> * <span class="number">32</span> :] &lt;&lt; (<span class="number">32</span> - extra))</span><br><span class="line">                ^ UncertainBit(<span class="string">"X"</span>).repeat(<span class="number">32</span> - extra),</span><br><span class="line">            )</span><br><span class="line">            self.known_32bit(bv)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">untempering</span><span class="params">(self, y)</span>:</span></span><br><span class="line">        y ^= y &gt;&gt; <span class="number">18</span></span><br><span class="line">        y ^= (y &lt;&lt; <span class="number">15</span>) &amp; <span class="number">0xEFC60000</span></span><br><span class="line">        y ^= (</span><br><span class="line">            ((y &lt;&lt; <span class="number">7</span>) &amp; <span class="number">0x9D2C5680</span>)</span><br><span class="line">            ^ ((y &lt;&lt; <span class="number">14</span>) &amp; <span class="number">0x94284000</span>)</span><br><span class="line">            ^ ((y &lt;&lt; <span class="number">21</span>) &amp; <span class="number">0x14200000</span>)</span><br><span class="line">            ^ ((y &lt;&lt; <span class="number">28</span>) &amp; <span class="number">0x10000000</span>)</span><br><span class="line">        )</span><br><span class="line">        y ^= (y &gt;&gt; <span class="number">11</span>) ^ (y &gt;&gt; <span class="number">22</span>)</span><br><span class="line">        <span class="keyword">return</span> y</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">generate</span><span class="params">(self, i)</span>:</span></span><br><span class="line">        y = (self.mt[i - self.N] &amp; <span class="number">0x80000000</span>) | (self.mt[i - self.N + <span class="number">1</span>] &amp; <span class="number">0x7FFFFFFF</span>)</span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">            self.mt[i + <span class="number">397</span> - self.N] ^ (y &gt;&gt; <span class="number">1</span>) ^ (<span class="number">0x9908B0DF</span> &amp; (y &amp; <span class="number">1</span>).sign_ext(<span class="number">32</span>))</span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">do_predit</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(self.N, self.pos - <span class="number">397</span> + self.N):</span><br><span class="line">            self.known_raw(i, self.generate(i))</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">prime_to_bv</span><span class="params">(self, p)</span>:</span></span><br><span class="line">        <span class="keyword">import</span> sympy</span><br><span class="line"></span><br><span class="line">        pp = sympy.prevprime(p)</span><br><span class="line">        end = p - <span class="number">1</span></span><br><span class="line">        start = pp</span><br><span class="line">        bv = UncertainBitVector(p.bit_length(), start)</span><br><span class="line">        bv = bv ^ UncertainBit(<span class="string">"X"</span>).repeat((start ^ end).bit_length())</span><br><span class="line">        <span class="keyword">return</span> bv</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__str__</span><span class="params">(self)</span>:</span></span><br><span class="line">        s = []</span><br><span class="line">        <span class="keyword">for</span> i, bv <span class="keyword">in</span> enumerate(self.mt):</span><br><span class="line">            s.append(<span class="string">"%s: %s %s"</span> % (i, bv, <span class="string">"&lt;&lt;X&gt;&gt;"</span> <span class="keyword">if</span> <span class="string">"X"</span> <span class="keyword">in</span> str(bv) <span class="keyword">else</span> <span class="string">""</span>))</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"\n"</span>.join(s)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_mt_window</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.mt[max(self.pos - self.N, <span class="number">0</span>) : self.pos]</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">ready</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.pos &gt;= self.N <span class="keyword">and</span> all(bv.all_known() <span class="keyword">for</span> bv <span class="keyword">in</span> self.get_mt_window())</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_progress</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> sum(int(bv.all_known()) <span class="keyword">for</span> bv <span class="keyword">in</span> self.get_mt_window())</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_random</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> self.ready():</span><br><span class="line">            <span class="keyword">raise</span> ValueError()</span><br><span class="line">        <span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line">        rnd = random.Random()</span><br><span class="line">        rnd.setstate(</span><br><span class="line">            (<span class="number">3</span>, tuple(bv.int_value() <span class="keyword">for</span> bv <span class="keyword">in</span> self.get_mt_window()) + (self.N,), <span class="keyword">None</span>)</span><br><span class="line">        )</span><br><span class="line">        <span class="keyword">return</span> rnd</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    <span class="keyword">from</span> pwn <span class="keyword">import</span> * <span class="comment"># pip3 install --upgrade git+https://github.com/arthaud/python3-pwntools.git</span></span><br><span class="line">    <span class="keyword">import</span> random</span><br><span class="line">    <span class="keyword">import</span> sympy</span><br><span class="line"></span><br><span class="line">    <span class="comment"># context.log_level = 'debug'</span></span><br><span class="line"></span><br><span class="line">    r = remote(<span class="string">"127.0.0.1"</span>, <span class="number">10010</span>)</span><br><span class="line">    r.sendline(<span class="string">"your token"</span>)</span><br><span class="line">    r.recvuntil(<span class="string">"Welcome"</span>)</span><br><span class="line">    s = MTSolver()</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">            r.sendline(<span class="string">"H"</span>)</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">            print(i * <span class="number">10</span> + j)</span><br><span class="line">            r.recvuntil(<span class="string">"p = "</span>)</span><br><span class="line">            p = int(r.recvline().strip())</span><br><span class="line">            r.recvuntil(<span class="string">"q = "</span>)</span><br><span class="line">            q = int(r.recvline().strip())</span><br><span class="line">            r.recvuntil(<span class="string">"under "</span>)</span><br><span class="line">            b = int(r.recvline().split(<span class="string">b" "</span>)[<span class="number">0</span>])</span><br><span class="line"></span><br><span class="line">            s.known_range(<span class="number">10</span>, <span class="number">1024</span>, b)</span><br><span class="line">            bound = <span class="number">2</span> ** b</span><br><span class="line">            s.known_prime(<span class="number">3</span>, bound, p)</span><br><span class="line">            s.known_prime(<span class="number">3</span>, bound, q)</span><br><span class="line">        s.do_predit()</span><br><span class="line">        print(s.get_progress(), <span class="string">"/ 624"</span>)</span><br><span class="line">        <span class="keyword">if</span> s.ready():</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    random.setstate(s.get_random().getstate())</span><br><span class="line"></span><br><span class="line">    r.sendline(<span class="string">"B"</span>)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>, <span class="number">1024</span>, <span class="number">32</span>):</span><br><span class="line">        print(i)</span><br><span class="line">        p = sympy.randprime(<span class="number">3</span>, <span class="number">2</span> ** i)</span><br><span class="line">        q = sympy.randprime(<span class="number">3</span>, <span class="number">2</span> ** i)</span><br><span class="line">        r.sendline(<span class="string">"p = "</span> + str(p))</span><br><span class="line">        r.sendline(<span class="string">"q = "</span> + str(q))</span><br><span class="line">    r.interactive()</span><br></pre></td></tr></table></figure></p>
+<h2 id="tinyELF"><a href="#tinyELF" class="headerlink" title="tinyELF"></a>tinyELF</h2><p>题目很简单，但是在wp上看到了用angr解题的方法，记录一下。<br>emmm一直说要研究angr，希望能提上日程…菜还是要多读书<br>程序中的可见字符串:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">strings tinyELF</span><br><span class="line">please in put flag:</span><br><span class="line">correct</span><br></pre></td></tr></table></figure></p>
+<p>用angr求解什么样的输入可以让程序输出”correct”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import angr</span><br><span class="line"></span><br><span class="line">proj = angr.Project(&quot;tinyELF&quot;)</span><br><span class="line">simgr = proj.factory.simgr()</span><br><span class="line">simgr.explore(find=lambda s: b&quot;correct&quot; in s.posix.dumps(1))</span><br><span class="line">print(simgr.found[0].posix.dumps(0))</span><br></pre></td></tr></table></figure></p>
+<p>运行一下就能出flag</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CTF/" rel="tag"><i class="fa fa-tag"></i> CTF</a>
+          
+            <a href="/tags/WriteUp/" rel="tag"><i class="fa fa-tag"></i> WriteUp</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/12/IDAPython/" rel="next" title="IDAPython">
+                <i class="fa fa-chevron-left"></i> IDAPython
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">EP</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/LinkleYping" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://plus.google.com/108330185362254827913" target="_blank" title="Google">
+                      
+                        <i class="fa fa-fw fa-google"></i>Google</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com/5882041323/profile?topnav=1&wvr=6" target="_blank" title="Weibo">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#USTC-CTF-2019"><span class="nav-number">1.</span> <span class="nav-text">USTC CTF 2019</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#宇宙终极问题"><span class="nav-number">2.</span> <span class="nav-text">宇宙终极问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Happy-LUG"><span class="nav-number">3.</span> <span class="nav-text">Happy LUG</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正则验证器"><span class="nav-number">4.</span> <span class="nav-text">正则验证器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#驴啃计算器"><span class="nav-number">5.</span> <span class="nav-text">驴啃计算器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#天书残篇"><span class="nav-number">6.</span> <span class="nav-text">天书残篇</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#我想要个家"><span class="nav-number">7.</span> <span class="nav-text">我想要个家</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十次方根"><span class="nav-number">8.</span> <span class="nav-text">十次方根</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#大整数分解锦标赛"><span class="nav-number">9.</span> <span class="nav-text">大整数分解锦标赛</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tinyELF"><span class="nav-number">10.</span> <span class="nav-text">tinyELF</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">EP</span>
+
+  
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+  <!-- 代码块复制功能 -->
+  <script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
+  <script type="text/javascript" src="/js/src/clipboard-use.js"></script>
+  <!-- 页面点击小红心 -->
+  <script type="text/javascript" src="/js/src/clicklove.js"></script> 
+</body>
+</html>
